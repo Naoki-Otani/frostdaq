@@ -1,0 +1,147 @@
+#
+#  UserParam_e70_20230621
+#
+#------------------------------------------------------------------------------
+# Hodoscope
+#------------------------------------------------------------------------------
+
+### BH1
+TdcBH1 450000 550000
+DeBH1 0.3 4
+
+### BH2
+TdcBH2 200000 300000
+DeBH2 0.3 4
+
+### BH2 Mt gate (for Time0)
+MtBH2 -2 2
+
+### BTOF gate
+BTOF -2 2
+
+### BAC
+TdcBAC 700 800
+
+### AFT
+TdcAFT 600 800
+TimeAFT 700 800
+TotRefAFT 65.
+
+### VMEEASIROC
+TdcVMEEASIROC 730 770
+TotRefVMEEASIROC 40.0
+
+### TOF
+TdcTOF 200000 300000
+DeTOF 0.3 4
+
+### TOF time range
+TimeTOF 7 25
+
+### AC1
+TdcAC1		170 270
+
+### WC
+TdcWC		230 330
+
+### BFT
+TdcBFT 600 750
+TimeBFT -5 5
+TotRefBFT 39.9 40.1
+
+#------------------------------------------------------------------------------
+# for Cluster
+#------------------------------------------------------------------------------
+MaxClusterSizeBH1	1
+MaxClusterSizeBH2	1
+MaxClusterSizeBAC	1
+MaxClusterSizeTOF	1
+MaxClusterSizeAC1	1
+MaxClusterSizeWC	1
+MaxClusterSizeBFT	10
+MaxClusterSizeAFT	10
+MaxTimeDiffBH1		2.0
+MaxTimeDiffBH2		2.0
+MaxTimeDiffBAC		-1.0
+MaxTimeDiffTOF		-1.0
+MaxTimeDiffAC1		-1.0
+MaxTimeDiffWC		-1.0
+MaxTimeDiffBFT		8.0
+MaxTimeDiffAFT		8.0
+
+#------------------------------------------------------------------------------
+# BC/SDC
+#------------------------------------------------------------------------------
+
+### BC/SDC TDC gate range
+TdcBC3 200 1200
+TdcBC4 200 1200
+TdcSDC1 200 1200
+TdcSDC2 200 1200
+TdcSDC3 200 1600
+TdcSDC4 200 1600
+TdcSDC5 200 1600
+
+### SDCout Trailing gate range
+TrailingSDC1 200 450
+TrailingSDC2 0 1000
+TrailingSDC3 0 1300
+TrailingSDC4 0 1300
+TrailingSDC5 0 1300
+
+### BC/SDC TOT cut
+MinTotBcOut 20
+MinTotSDC1 30
+MinTotSDC2 30
+MinTotSDC3 50
+MinTotSDC4 50
+MinTotSDC5 50
+
+### BC/SDC plane multiplicity gate
+MinLayerBcOut 8
+MinLayerSdcIn 8
+
+### SDCOUT plane multiplicity gate (+2 in SdcOutTracking)
+MinLayerSdcOut  10
+
+### BC/SDC multiplicity gate
+MaxMultiHitBcOut 16
+MaxMultiHitSdcIn 16
+MaxMultiHitSdcOut 16
+
+### CommonStop timing of "L1" for SdcOut
+StopTimingSdcOut 360 400
+
+### SdcOut dT offset for L1 stop timing
+StopTimeDiffSdcOut 150
+
+### STOF offset between BH2-Target
+StofOffset	-2.0378
+
+### BcOutSdcInTracking
+#MinLayerBcOutSdcIn 22
+MinLayerBcOutSdcIn 20
+
+#### TARGET
+FF_PLUS 0
+
+### Conversion parameters(timediff to hitposition)
+PropagationBH2 137.815
+PropagationHTOF 158.167
+
+# E72E90
+TdcE72BAC		0 2000000
+TdcE90SAC		0 2000000
+TdcE72KVC		0 2000000
+TdcE42BH2		0 2000000
+TdcT1		0 2000000
+TdcT2		0 2000000
+
+### SAC3 & SFV TDC gate range
+TdcSAC3		0 2000000
+TdcSFV		0 2000000
+
+### TF TDC gate range
+TdcTF_TF		0 2000000
+TdcTF_GN1		0 2000000
+TdcTF_GN2		0 2000000

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<channel_map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema/channel_map.xsd">
+
+  <!--________________________________________________________________-->
+  <DAQNode node_id="1" name="k18eb">
+
+    <!--______RAYRAW bench ____________-->
+    <Rayraw node_id="0x101" name="rayraw-1">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+  	<FE ch="ch" data="data"><D Device="RAYRAW" plane="0" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x102" name="rayraw-2">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="1" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x103" name="rayraw-3">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="2" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x104" name="rayraw-4">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="3" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x105" name="rayraw-5">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="4" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x106" name="rayraw-6">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="5" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x107" name="rayraw-7">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="6" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x108" name="rayraw-8">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="7" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x109" name="rayraw-9">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="8" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x10a" name="rayraw-10">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="9" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x10b" name="rayraw-11">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+    	<FE ch="ch" data="data"><D Device="RAYRAW" plane="10" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+    <Rayraw node_id="0x10c" name="rayraw-12">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="4">
+        <FE ch="ch" data="data"><D Device="RAYRAW" plane="11" segment="ch" data="data"/></FE>
+      </for></for>
+    </Rayraw>
+  </DAQNode>
+</channel_map>

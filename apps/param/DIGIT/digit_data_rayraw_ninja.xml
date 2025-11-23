@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<digit_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:noNamespaceSchemaLocation="schema/digit.xsd">
+
+  <device id="0xff" name="null"/>
+
+  <!--_______RAYRAW___________________________________________________-->
+  <device id="31" name="RAYRAW" type="Fiber">
+    <for var="plane" from="0" to="11"><plane id="plane"><for var="seg" from="0" to="31">
+      <segment id="seg">
+	<data id="0" name="fadc"/>
+	<data id="1" name="crs_cnt"/>
+	<data id="2" name="leading"/>
+	<data id="3" name="trailing"/>
+	<data id="4" name="overflow"/>
+  <data id="5" name="highgain"/>
+  <data id="6" name="lowgain"/>
+      </segment></for>
+    </plane></for>
+  </device>
+</digit_data>

@@ -1,0 +1,13 @@
+#############################
+# Don't change the Value
+#############################
+
+# setup of SDIF_ADC_CLK_POL
+
+# YAENAMI : value (invert SDIF CLK polarity = 1)
+# Default: 1
+
+0 : 1
+1 : 1
+2 : 1
+3 : 1

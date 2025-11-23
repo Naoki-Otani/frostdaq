@@ -1,0 +1,71 @@
+#!/bin/sh
+##
+#  shell script for online/semi online analyzer
+##
+
+. $(dirname $(readlink -f $0))/setebhost
+
+dis_port=8901
+rec_port=8902
+
+#port=$rec_port
+port=$dis_port
+
+ana_dir=$(dirname $(readlink -f $0))/..
+bin_dir=$ana_dir/bin
+
+##### execute file
+exe_file=$bin_dir/mstmonitor_e40
+
+##### data directory
+data_dir=$ana_dir/data
+
+##### result directory
+reference_no=0
+while read LINE || [ - "$LINE" ]; do
+    reference_no=$LINE
+    break
+done < $HOME/MsTMonitor/ref_runno.txt
+result_dir=$HOME/MsTMonitor
+
+##### configure file
+conf_file=/param/conf/analyzer_mstmonitor.conf
+
+#######################################################################
+if [ ! -f $exe_file ]; then
+    echo "#E [$(basename $0)] no such file: $exe_file"
+    exit
+fi
+if [ ! -f $conf_file ]; then
+    echo "#E [$(basename $0)] no such file: $conf_file"
+    exit
+fi
+
+if [ $# = 0 ]; then
+    echo "#E: This script doesn't support online mode."
+#    $exe_file $conf_file ${ebhost}:$port $result_dir $reference_no $1
+    exit
+fi
+
+for d in ${data_dir[@]}
+do
+    data_file=`find -L $d/ -name "run$1.dat*" 2>/dev/null`
+    if [ -z "$data_file" ]; then
+	continue
+    fi
+    if [ $# = 1 ]; then
+	mods=`stat -c %a $data_file`
+	mod=`echo $mods | cut -d' ' -f1`
+	if [ $mod = "444" ]; then
+	    $exe_file $conf_file $data_file $result_dir $reference_no $1
+	    echo "hoge"
+	else
+	    echo "#E: Data file is not completely synchronized."
+	fi
+	exit
+    else
+	echo "#D Usage: $(basename $0) [run number]"
+	exit
+    fi
+done
+echo "#E [$(basename $0)] no such run: $1"

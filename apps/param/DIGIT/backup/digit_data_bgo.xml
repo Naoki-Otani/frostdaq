@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<digit_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:noNamespaceSchemaLocation="schema/digit.xsd">
+
+  <device id="0xff" name="null"/>
+  <!--________________________________________________________________-->
+  <device id="110" name="TC1">
+    <plane id="0" name="X"><for var="seg" from="0" to="31">
+      <segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+      </segment></for>
+    </plane>
+    <plane id="1" name="Y"><for var="seg" from="32" to="63">
+      <segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+      </segment></for>
+    </plane>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="111" name="TC2">
+    <plane id="0" name="X"><for var="seg" from="0" to="31">
+      <segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+	</segment></for>
+    </plane>
+    <plane id="1" name="Y"><for var="seg" from="32" to="63">
+      <segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+      </segment></for>
+    </plane>
+  </device>
+  <!--_________________________________________________________________-->
+  <device id="120" name="BGO">
+    <for var="seg" from="0" to="1">
+      <segment id="seg">
+	  <data id="0" name="adc"/>
+	  <data id="1" name="tdc"/>
+	  <data id="2" name="trailing"/>
+          <data id="3" name="cstop"/>
+          <data id="4" name="overflow"/>
+    </segment></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="130" name="TCtrig">
+     <segment id="0">
+        <data id="0" name="adc"/>
+        <data id="1" name="tdc"/>
+        <data id="2" name="trailing"/>
+        <data id="3" name="cstop"/>
+        <data id="4" name="overflow"/>
+     </segment>
+  </device>
+
+  <device id="131" name="BGOtrig">
+    <segment id="0">
+      <data id="0" name="adc"/>
+        <data id="1" name="tdc"/>
+        <data id="2" name="trailing"/>
+        <data id="3" name="cstop"/>
+        <data id="4" name="overflow"/>
+     </segment>
+  </device>
+
+
+    <device id="132" name="BH2OR">
+      <segment id="0">
+	<data id="0" name="adc"/>
+        <data id="1" name="tdc"/>
+        <data id="2" name="trailing"/>
+        <data id="3" name="cstop"/>
+        <data id="4" name="overflow"/>
+     </segment>
+    </device>
+
+     <device id="133" name="clock">
+      <segment id="0">
+	<data id="0" name="adc"/>
+        <data id="1" name="tdc"/>
+        <data id="2" name="trailing"/>
+        <data id="3" name="cstop"/>
+        <data id="4" name="overflow"/>
+     </segment>
+  </device>
+
+  <!--______________________________________________________________
+      ___-->
+
+    <device id="140" name="PL">
+      <plane id="0" name="PL_U"><for var="seg" from="0" to="1">
+	<segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+	</segment></for>
+      </plane>
+      <plane id="1" name="PL_D"><for var="seg" from="0" to="1">
+	<segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+	</segment></for>
+      </plane>
+      <plane id="2" name="pl"><for var="seg" from="0" to="1">
+	<segment id="seg">
+	  <data id="0" name="leading"/>
+          <data id="1" name="trailing"/>
+          <data id="2" name="highgain"/>
+          <data id="3" name="lowgain"/>
+	</segment></for>
+      </plane>
+    </device>
+
+  <!--______________________________________________________________
+      ___-->
+
+</digit_data>

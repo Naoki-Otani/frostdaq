@@ -1,0 +1,191 @@
+2025-08-28T05:56:30.836Z [info] [proc] Executing command: /usr/bin/cmake --version
+2025-08-28T05:56:30.836Z [debug] [proc]   with environment: {"USER":"root","VSCODE_WSL_EXT_LOCATION":"/mnt/c/Users/kuhep_guest/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0","SHLVL":"0","HOME":"/root","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/0/bus","WSL_DISTRO_NAME":"Ubuntu","WAYLAND_DISPLAY":"wayland-0","LOGNAME":"root","NAME":"kuhep","WSL_INTEROP":"/run/WSL/53634_interop","PULSE_SERVER":"unix:/mnt/wslg/PulseServer","_":"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/node","TERM":"xterm-256color","PATH":"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/bin/remote-cli:/root/apps/unpacker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/kuhep_guest/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin","XDG_RUNTIME_DIR":"/run/user/0/","DISPLAY":":0","LANG":"C.UTF-8","SHELL":"/bin/bash","PWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","WSL2_GUI_APPS_ENABLED":"1","HOSTTYPE":"x86_64","WSLENV":"VSCODE_WSL_EXT_LOCATION/up","VSCODE_CWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"en\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/out/nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_HANDLES_SIGPIPE":"true","HOSTNAME":"kuhep","LS_COLORS":"rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:","LESSCLOSE":"/usr/bin/lesspipe %s %s","LESSOPEN":"| /usr/bin/lesspipe %s","DEBUGINFOD_URLS":"https://debuginfod.ubuntu.com ","XDG_DATA_DIRS":"/usr/local/share:/usr/share:/var/lib/snapd/desktop","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","ELECTRON_RUN_AS_NODE":"1","VSCODE_IPC_HOOK_CLI":"/run/user/0/vscode-ipc-6323954a-b67e-4993-804b-d15e2532ac3a.sock"}
+2025-08-28T05:56:30.870Z [info] [proc] Executing command: /usr/bin/cmake -E capabilities
+2025-08-28T05:56:30.870Z [debug] [proc]   with environment: {"USER":"root","VSCODE_WSL_EXT_LOCATION":"/mnt/c/Users/kuhep_guest/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0","SHLVL":"0","HOME":"/root","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/0/bus","WSL_DISTRO_NAME":"Ubuntu","WAYLAND_DISPLAY":"wayland-0","LOGNAME":"root","NAME":"kuhep","WSL_INTEROP":"/run/WSL/53634_interop","PULSE_SERVER":"unix:/mnt/wslg/PulseServer","_":"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/node","TERM":"xterm-256color","PATH":"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/bin/remote-cli:/root/apps/unpacker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/kuhep_guest/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin","XDG_RUNTIME_DIR":"/run/user/0/","DISPLAY":":0","LANG":"C.UTF-8","SHELL":"/bin/bash","PWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","WSL2_GUI_APPS_ENABLED":"1","HOSTTYPE":"x86_64","WSLENV":"VSCODE_WSL_EXT_LOCATION/up","VSCODE_CWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"en\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"/root/.vscode-server/bin/360a4e4fd251bfce169a4ddf857c7d25d1ad40da/out/nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_HANDLES_SIGPIPE":"true","HOSTNAME":"kuhep","LS_COLORS":"rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:","LESSCLOSE":"/usr/bin/lesspipe %s %s","LESSOPEN":"| /usr/bin/lesspipe %s","DEBUGINFOD_URLS":"https://debuginfod.ubuntu.com ","XDG_DATA_DIRS":"/usr/local/share:/usr/share:/var/lib/snapd/desktop","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","ELECTRON_RUN_AS_NODE":"1","VSCODE_IPC_HOOK_CLI":"/run/user/0/vscode-ipc-6323954a-b67e-4993-804b-d15e2532ac3a.sock"}
+2025-08-28T05:56:30.942Z [debug] [main] Safe constructing new CMakeProject instance
+2025-08-28T05:56:30.943Z [debug] [variant] Constructing VariantManager
+2025-08-28T05:56:30.943Z [debug] [main] Constructing new CMakeProject instance
+2025-08-28T05:56:30.944Z [debug] [main] Starting CMake Tools second-phase init
+2025-08-28T05:56:30.944Z [debug] [expand] expanded ${workspaceFolder}
+2025-08-28T05:56:30.954Z [debug] [kit] Reading kits file /root/.local/share/CMakeTools/cmake-tools-kits.json
+2025-08-28T05:56:31.003Z [info] [kit] Successfully loaded 1 kits from /root/.local/share/CMakeTools/cmake-tools-kits.json
+2025-08-28T05:56:31.022Z [debug] [kit] Not reading non-existent kits file: /root/apps/hul-common-lib/src/.vscode/cmake-kits.json
+2025-08-28T05:56:31.046Z [info] [variant] Loaded new set of variants
+2025-08-28T05:56:31.046Z [debug] [main] CMakeProject instance initialization complete.
+2025-08-28T05:56:31.073Z [debug] [extension] Configuring workspace on open /root/apps/hul-common-lib/src
+2025-08-28T05:56:31.076Z [debug] [kitsController] Start selection of kits. Found 4 kits.
+2025-08-28T05:56:31.076Z [debug] [kitsController] Opening kit selection QuickPick
+2025-08-28T05:56:31.794Z [debug] [kitsController] User cancelled Kit selection
+2025-08-28T05:56:34.063Z [debug] [main] Not starting CMake driver: no kit selected
+2025-08-28T05:58:22.743Z [debug] [main] Not starting CMake driver: no kit selected
+2025-08-28T05:58:40.095Z [debug] [extension] Deactivate CMakeTools
+. Found 4 kits.
+2025-08-28T05:41:22.279Z [debug] [kitsController] Opening kit selection QuickPick
+2025-08-28T05:41:26.872Z [debug] [kitsController] User cancelled Kit selection
+2025-08-28T05:41:27.441Z [debug] [main] Not starting CMake driver: no kit selected
+2025-08-28T05:41:33.141Z [debug] [main] Not starting CMake driver: no kit selected
+2025-08-28T05:42:59.848Z [debug] [main] Not starting CMake driver: no kit selected
+2025-08-28T05:53:42.978Z [debug] [extension] Deactivate CMakeTools
+:"VSCODE_WSL_EXT_LOCATION/up","VSCODE_CWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"en\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/out/nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_HANDLES_SIGPIPE":"true","LS_COLORS":"rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:","LESSCLOSE":"/usr/bin/lesspipe %s %s","LESSOPEN":"| /usr/bin/lesspipe %s","DEBUGINFOD_URLS":"https://debuginfod.ubuntu.com ","XDG_DATA_DIRS":"/usr/local/share:/usr/share:/var/lib/snapd/desktop","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","ELECTRON_RUN_AS_NODE":"1","VSCODE_IPC_HOOK_CLI":"/run/user/0/vscode-ipc-c5aaace7-f6b8-431e-a2ab-0d0962d417a1.sock","VSCODE_L10N_BUNDLE_LOCATION":""}
+2025-05-01T05:20:31.990Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T05:20:31.990Z [error] [cmake]   No project() command is present.  The top-level CMakeLists.txt file must
+2025-05-01T05:20:31.990Z [error] [cmake]   contain a literal, direct call to the project() command.  Add a line of
+2025-05-01T05:20:31.990Z [error] [cmake]   code such as
+2025-05-01T05:20:31.990Z [error] [cmake] 
+2025-05-01T05:20:31.990Z [error] [cmake]     project(ProjectName)
+2025-05-01T05:20:31.990Z [error] [cmake] 
+2025-05-01T05:20:31.990Z [error] [cmake]   near the top of the file, but after cmake_minimum_required().
+2025-05-01T05:20:31.990Z [error] [cmake] 
+2025-05-01T05:20:31.991Z [error] [cmake]   CMake is pretending there is a "project(Project)" command on the first
+2025-05-01T05:20:31.991Z [error] [cmake]   line.
+2025-05-01T05:20:31.991Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T05:20:31.991Z [error] [cmake] 
+2025-05-01T05:20:31.991Z [info] [cmake] Not searching for unused variables given on the command line.
+2025-05-01T05:20:31.992Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T05:20:31.992Z [error] [cmake]   cmake_minimum_required() should be called prior to this top-level project()
+2025-05-01T05:20:31.992Z [error] [cmake]   call.  Please see the cmake-commands(7) manual for usage documentation of
+2025-05-01T05:20:31.992Z [error] [cmake]   both commands.
+2025-05-01T05:20:31.992Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T05:20:31.992Z [error] [cmake] 
+2025-05-01T05:20:32.010Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T05:20:32.010Z [error] [cmake]   No cmake_minimum_required command is present.  A line of code such as
+2025-05-01T05:20:32.010Z [error] [cmake] 
+2025-05-01T05:20:32.010Z [error] [cmake]     cmake_minimum_required(VERSION 3.28)
+2025-05-01T05:20:32.010Z [error] [cmake] 
+2025-05-01T05:20:32.010Z [error] [cmake]   should be added at the top of the file.  The version specified may be lower
+2025-05-01T05:20:32.010Z [error] [cmake]   if you wish to support older CMake versions for this project.  For more
+2025-05-01T05:20:32.010Z [error] [cmake]   information run "cmake --help-policy CMP0000".
+2025-05-01T05:20:32.010Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T05:20:32.010Z [error] [cmake] 
+2025-05-01T05:20:32.011Z [info] [cmake] -- Configuring done (0.0s)
+2025-05-01T05:20:32.017Z [info] [cmake] -- Generating done (0.0s)
+2025-05-01T05:20:32.020Z [info] [cmake] -- Build files have been written to: /root/apps/rayraw-soft/src/TrgFw/build
+2025-05-01T05:20:32.022Z [debug] [cmakefileapi-parser] Read reply folder: /root/apps/rayraw-soft/src/TrgFw/build/.cmake/api/v1/reply
+2025-05-01T05:20:32.023Z [debug] [cmakefileapi-parser] Found index files: ["cache-v2-8624fae7a3bad284839f.json","cmakeFiles-v1-1cc7858a13713967eeb5.json","codemodel-v2-fbac654af66d7fb3aeb2.json","directory-.-Debug-1e14ead663c57205bf97.json","index-2025-05-01T05-20-32-0019.json","target-TrgFw_daq-Debug-7957d9e617b879cb681c.json","toolchains-v1-de13eb4a293a7f94668f.json"]
+2025-05-01T05:20:32.276Z [debug] [cache] Reading CMake cache file /root/apps/rayraw-soft/src/TrgFw/build/CMakeCache.txt
+2025-05-01T05:20:32.277Z [debug] [cache] Parsing CMake cache string
+2025-05-12T06:00:29.043Z [debug] [extension] Deactivate CMakeTools
+E": "/usr/bin/lesspipe %s %s",
+  "LESSOPEN": "| /usr/bin/lesspipe %s",
+  "DEBUGINFOD_URLS": "https://debuginfod.ubuntu.com ",
+  "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+  "VSCODE_ESM_ENTRYPOINT": "vs/workbench/api/node/extensionHostProcess",
+  "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+  "ELECTRON_RUN_AS_NODE": "1",
+  "VSCODE_IPC_HOOK_CLI": "/run/user/0/vscode-ipc-a1740aab-8ee9-4afb-980d-f63b1260ecc9.sock"
+}
+2025-05-01T03:34:18.324Z [debug] [driver] Trying to detect generator supported by system
+2025-05-01T03:34:18.344Z [warning] [proc] The command: ninja --version failed with error: Error: spawn ninja ENOENT
+2025-05-01T03:34:18.366Z [warning] [proc] The command: ninja-build --version failed with error: Error: spawn ninja-build ENOENT
+2025-05-01T03:34:18.372Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:18.373Z [debug] [driver] Setting new variant Debug
+2025-05-01T03:34:18.374Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:18.375Z [info] [main] Configuring project: TrgFw 
+2025-05-01T03:34:18.376Z [debug] [main] Saving open files before configure/build
+2025-05-01T03:34:18.488Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:18.488Z [debug] [driver] Start configure 
+2025-05-01T03:34:18.488Z [debug] [driver] Running pre-configure checks and steps
+2025-05-01T03:34:18.489Z [debug] [driver] Using compilers in GCC 13.3.0 x86_64-linux-gnu for configure
+2025-05-01T03:34:18.492Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:18.506Z [debug] [cmakefileapi-driver] Configuring using kit
+2025-05-01T03:34:18.506Z [debug] [cmakefileapi-driver] Invoking CMake /usr/bin/cmake with arguments ["-DCMAKE_BUILD_TYPE:STRING=Debug","-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE","-DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc","-DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++","--no-warn-unused-cli","-S/root/apps/rayraw-soft/src/TrgFw","-B/root/apps/rayraw-soft/src/TrgFw/build","-G","Unix Makefiles"]
+2025-05-01T03:34:18.508Z [info] [proc] Executing command: /usr/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ --no-warn-unused-cli -S/root/apps/rayraw-soft/src/TrgFw -B/root/apps/rayraw-soft/src/TrgFw/build -G "Unix Makefiles"
+2025-05-01T03:34:18.509Z [debug] [proc]   with environment: {"USER":"root","VSCODE_WSL_EXT_LOCATION":"/mnt/c/Users/kuhep_guest/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0","SHLVL":"0","HOME":"/root","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/0/bus","WSL_DISTRO_NAME":"Ubuntu","WAYLAND_DISPLAY":"wayland-0","LOGNAME":"root","NAME":"kuhep","WSL_INTEROP":"/run/WSL/40888_interop","PULSE_SERVER":"unix:/mnt/wslg/PulseServer","_":"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/node","TERM":"xterm-256color","PATH":"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/kuhep_guest/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin","XDG_RUNTIME_DIR":"/run/user/0/","DISPLAY":":0","LANG":"C.UTF-8","SHELL":"/bin/bash","VSCODE_SERVER_TAR":"/mnt/c/Users/kuhep_guest/vscode-remote-wsl/stable/17baf841131aa23349f217ca7c570c76ee87b957/vscode-server-stable-linux-x64.tar.gz","PWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","WSL2_GUI_APPS_ENABLED":"1","HOSTTYPE":"x86_64","WSLENV":"VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up","VSCODE_CWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"en\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/out/nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_HANDLES_SIGPIPE":"true","LS_COLORS":"rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:","LESSCLOSE":"/usr/bin/lesspipe %s %s","LESSOPEN":"| /usr/bin/lesspipe %s","DEBUGINFOD_URLS":"https://debuginfod.ubuntu.com ","XDG_DATA_DIRS":"/usr/local/share:/usr/share:/var/lib/snapd/desktop","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","ELECTRON_RUN_AS_NODE":"1","VSCODE_IPC_HOOK_CLI":"/run/user/0/vscode-ipc-a1740aab-8ee9-4afb-980d-f63b1260ecc9.sock"}
+2025-05-01T03:34:18.518Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:18.518Z [error] [cmake]   No project() command is present.  The top-level CMakeLists.txt file must
+2025-05-01T03:34:18.518Z [error] [cmake]   contain a literal, direct call to the project() command.  Add a line of
+2025-05-01T03:34:18.518Z [error] [cmake]   code such as
+2025-05-01T03:34:18.519Z [error] [cmake] 
+2025-05-01T03:34:18.519Z [error] [cmake]     project(ProjectName)
+2025-05-01T03:34:18.519Z [error] [cmake] 
+2025-05-01T03:34:18.519Z [error] [cmake]   near the top of the file, but after cmake_minimum_required().
+2025-05-01T03:34:18.519Z [error] [cmake] 
+2025-05-01T03:34:18.519Z [error] [cmake]   CMake is pretending there is a "project(Project)" command on the first
+2025-05-01T03:34:18.519Z [error] [cmake]   line.
+2025-05-01T03:34:18.519Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:18.519Z [error] [cmake] 
+2025-05-01T03:34:18.519Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:18.520Z [error] [cmake]   cmake_minimum_required() should be called prior to this top-level project()
+2025-05-01T03:34:18.520Z [error] [cmake]   call.  Please see the cmake-commands(7) manual for usage documentation of
+2025-05-01T03:34:18.520Z [error] [cmake]   both commands.
+2025-05-01T03:34:18.520Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:18.520Z [error] [cmake] 
+2025-05-01T03:34:18.520Z [info] [cmake] Not searching for unused variables given on the command line.
+2025-05-01T03:34:18.679Z [info] [cmake] -- The C compiler identification is GNU 13.3.0
+2025-05-01T03:34:19.019Z [info] [cmake] -- The CXX compiler identification is GNU 13.3.0
+2025-05-01T03:34:19.353Z [info] [cmake] -- Detecting C compiler ABI info
+2025-05-01T03:34:19.512Z [info] [cmake] -- Detecting C compiler ABI info - done
+2025-05-01T03:34:19.521Z [info] [cmake] -- Check for working C compiler: /usr/bin/gcc - skipped
+2025-05-01T03:34:19.524Z [info] [cmake] -- Detecting C compile features
+2025-05-01T03:34:19.529Z [info] [cmake] -- Detecting C compile features - done
+2025-05-01T03:34:19.586Z [info] [cmake] -- Detecting CXX compiler ABI info
+2025-05-01T03:34:19.787Z [info] [cmake] -- Detecting CXX compiler ABI info - done
+2025-05-01T03:34:19.794Z [info] [cmake] -- Check for working CXX compiler: /usr/bin/g++ - skipped
+2025-05-01T03:34:19.795Z [info] [cmake] -- Detecting CXX compile features
+2025-05-01T03:34:19.795Z [info] [cmake] -- Detecting CXX compile features - done
+2025-05-01T03:34:19.798Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:19.798Z [error] [cmake]   No cmake_minimum_required command is present.  A line of code such as
+2025-05-01T03:34:19.798Z [error] [cmake] 
+2025-05-01T03:34:19.799Z [error] [cmake]     cmake_minimum_required(VERSION 3.28)
+2025-05-01T03:34:19.799Z [error] [cmake] 
+2025-05-01T03:34:19.799Z [error] [cmake]   should be added at the top of the file.  The version specified may be lower
+2025-05-01T03:34:19.799Z [error] [cmake]   if you wish to support older CMake versions for this project.  For more
+2025-05-01T03:34:19.799Z [error] [cmake]   information run "cmake --help-policy CMP0000".
+2025-05-01T03:34:19.799Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:19.799Z [error] [cmake] 
+2025-05-01T03:34:19.800Z [info] [cmake] -- Configuring done (1.3s)
+2025-05-01T03:34:19.801Z [info] [cmake] -- Generating done (0.0s)
+2025-05-01T03:34:19.803Z [info] [cmake] -- Build files have been written to: /root/apps/rayraw-soft/src/TrgFw/build
+2025-05-01T03:34:19.805Z [debug] [cmakefileapi-parser] Read reply folder: /root/apps/rayraw-soft/src/TrgFw/build/.cmake/api/v1/reply
+2025-05-01T03:34:19.806Z [debug] [cmakefileapi-parser] Found index files: ["cache-v2-47cb8bd49626220a632a.json","cmakeFiles-v1-3c34cdab4611b84b23cd.json","codemodel-v2-fbac654af66d7fb3aeb2.json","directory-.-Debug-1e14ead663c57205bf97.json","index-2025-05-01T03-34-19-0803.json","target-TrgFw_daq-Debug-7957d9e617b879cb681c.json","toolchains-v1-de13eb4a293a7f94668f.json"]
+2025-05-01T03:34:19.837Z [debug] [cache] Reading CMake cache file /root/apps/rayraw-soft/src/TrgFw/build/CMakeCache.txt
+2025-05-01T03:34:19.839Z [debug] [cache] Parsing CMake cache string
+2025-05-01T03:34:19.914Z [info] [main] Configuring project: TrgFw 
+2025-05-01T03:34:19.914Z [debug] [main] Saving open files before configure/build
+2025-05-01T03:34:19.988Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:19.990Z [debug] [driver] Start configure 
+2025-05-01T03:34:19.990Z [debug] [driver] Running pre-configure checks and steps
+2025-05-01T03:34:19.993Z [debug] [driver] Using compilers in GCC 13.3.0 x86_64-linux-gnu for configure
+2025-05-01T03:34:20.003Z [debug] [expand] expanded ${workspaceFolder}/build
+2025-05-01T03:34:20.006Z [debug] [cmakefileapi-driver] Configuring using kit
+2025-05-01T03:34:20.006Z [debug] [cmakefileapi-driver] Invoking CMake /usr/bin/cmake with arguments ["-DCMAKE_BUILD_TYPE:STRING=Debug","-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE","-DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc","-DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++","--no-warn-unused-cli","-S/root/apps/rayraw-soft/src/TrgFw","-B/root/apps/rayraw-soft/src/TrgFw/build","-G","Unix Makefiles"]
+2025-05-01T03:34:20.008Z [info] [proc] Executing command: /usr/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ --no-warn-unused-cli -S/root/apps/rayraw-soft/src/TrgFw -B/root/apps/rayraw-soft/src/TrgFw/build -G "Unix Makefiles"
+2025-05-01T03:34:20.008Z [debug] [proc]   with environment: {"USER":"root","VSCODE_WSL_EXT_LOCATION":"/mnt/c/Users/kuhep_guest/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0","SHLVL":"0","HOME":"/root","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/0/bus","WSL_DISTRO_NAME":"Ubuntu","WAYLAND_DISPLAY":"wayland-0","LOGNAME":"root","NAME":"kuhep","WSL_INTEROP":"/run/WSL/40888_interop","PULSE_SERVER":"unix:/mnt/wslg/PulseServer","_":"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/node","TERM":"xterm-256color","PATH":"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/kuhep_guest/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin","XDG_RUNTIME_DIR":"/run/user/0/","DISPLAY":":0","LANG":"C.UTF-8","SHELL":"/bin/bash","VSCODE_SERVER_TAR":"/mnt/c/Users/kuhep_guest/vscode-remote-wsl/stable/17baf841131aa23349f217ca7c570c76ee87b957/vscode-server-stable-linux-x64.tar.gz","PWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","WSL2_GUI_APPS_ENABLED":"1","HOSTTYPE":"x86_64","WSLENV":"VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up","VSCODE_CWD":"/mnt/c/Users/kuhep_guest/AppData/Local/Programs/Microsoft VS Code","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"en\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"/root/.vscode-server/bin/17baf841131aa23349f217ca7c570c76ee87b957/out/nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_HANDLES_SIGPIPE":"true","LS_COLORS":"rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:","LESSCLOSE":"/usr/bin/lesspipe %s %s","LESSOPEN":"| /usr/bin/lesspipe %s","DEBUGINFOD_URLS":"https://debuginfod.ubuntu.com ","XDG_DATA_DIRS":"/usr/local/share:/usr/share:/var/lib/snapd/desktop","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","ELECTRON_RUN_AS_NODE":"1","VSCODE_IPC_HOOK_CLI":"/run/user/0/vscode-ipc-a1740aab-8ee9-4afb-980d-f63b1260ecc9.sock"}
+2025-05-01T03:34:20.018Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:20.018Z [error] [cmake]   No project() command is present.  The top-level CMakeLists.txt file must
+2025-05-01T03:34:20.018Z [error] [cmake]   contain a literal, direct call to the project() command.  Add a line of
+2025-05-01T03:34:20.018Z [error] [cmake]   code such as
+2025-05-01T03:34:20.018Z [error] [cmake] 
+2025-05-01T03:34:20.018Z [error] [cmake]     project(ProjectName)
+2025-05-01T03:34:20.018Z [error] [cmake] 
+2025-05-01T03:34:20.018Z [error] [cmake]   near the top of the file, but after cmake_minimum_required().
+2025-05-01T03:34:20.019Z [error] [cmake] 
+2025-05-01T03:34:20.019Z [error] [cmake]   CMake is pretending there is a "project(Project)" command on the first
+2025-05-01T03:34:20.019Z [error] [cmake]   line.
+2025-05-01T03:34:20.019Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:20.020Z [error] [cmake] 
+2025-05-01T03:34:20.020Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:20.020Z [error] [cmake]   cmake_minimum_required() should be called prior to this top-level project()
+2025-05-01T03:34:20.020Z [error] [cmake]   call.  Please see the cmake-commands(7) manual for usage documentation of
+2025-05-01T03:34:20.020Z [error] [cmake]   both commands.
+2025-05-01T03:34:20.020Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:20.020Z [error] [cmake] 
+2025-05-01T03:34:20.021Z [info] [cmake] Not searching for unused variables given on the command line.
+2025-05-01T03:34:20.026Z [error] [cmake] CMake Warning (dev) in CMakeLists.txt:
+2025-05-01T03:34:20.026Z [error] [cmake]   No cmake_minimum_required command is present.  A line of code such as
+2025-05-01T03:34:20.026Z [error] [cmake] 
+2025-05-01T03:34:20.026Z [error] [cmake]     cmake_minimum_required(VERSION 3.28)
+2025-05-01T03:34:20.026Z [error] [cmake] 
+2025-05-01T03:34:20.026Z [error] [cmake]   should be added at the top of the file.  The version specified may be lower
+2025-05-01T03:34:20.026Z [error] [cmake]   if you wish to support older CMake versions for this project.  For more
+2025-05-01T03:34:20.026Z [error] [cmake]   information run "cmake --help-policy CMP0000".
+2025-05-01T03:34:20.026Z [error] [cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+2025-05-01T03:34:20.026Z [error] [cmake] 
+2025-05-01T03:34:20.027Z [info] [cmake] -- Configuring done (0.0s)
+2025-05-01T03:34:20.030Z [info] [cmake] -- Generating done (0.0s)
+2025-05-01T03:34:20.033Z [info] [cmake] -- Build files have been written to: /root/apps/rayraw-soft/src/TrgFw/build
+2025-05-01T03:34:20.034Z [debug] [cmakefileapi-parser] Read reply folder: /root/apps/rayraw-soft/src/TrgFw/build/.cmake/api/v1/reply
+2025-05-01T03:34:20.035Z [debug] [cmakefileapi-parser] Found index files: ["cache-v2-8624fae7a3bad284839f.json","cmakeFiles-v1-1cc7858a13713967eeb5.json","codemodel-v2-fbac654af66d7fb3aeb2.json","directory-.-Debug-1e14ead663c57205bf97.json","index-2025-05-01T03-34-20-0032.json","target-TrgFw_daq-Debug-7957d9e617b879cb681c.json","toolchains-v1-de13eb4a293a7f94668f.json"]
+2025-05-01T03:34:20.097Z [debug] [cache] Reading CMake cache file /root/apps/rayraw-soft/src/TrgFw/build/CMakeCache.txt
+2025-05-01T03:34:20.098Z [debug] [cache] Parsing CMake cache string
+2025-05-01T03:45:28.191Z [debug] [extension] Deactivate CMakeTools

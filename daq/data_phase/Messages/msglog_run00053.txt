@@ -1,0 +1,26 @@
+2025 09/11 04:04:48 [ 70000,  NORMAL ] $$ recorder got RUN# = 53
+2025 09/11 04:04:48 [ 70000,  NORMAL ] Rec: record start ./data/run00053.dat
+2025 09/11 04:04:48 [ 90000,  NORMAL ] ## BuilderThread got RUN# = 53
+2025 09/11 04:04:48 [ 90000,  NORMAL ] EB: start
+2025 09/11 04:04:48 [ 80000,  NORMAL ] ED: READER start
+2025 09/11 04:04:48 [ 90000,  NORMAL ] == sender: accepted
+2025 09/11 04:04:48 [ 80000,  NORMAL ] ED: ++ recDataSender : start
+2025 09/11 04:04:49 [   258,  NORMAL ] rayraw-2 [::init_device()] Connection done : 192.168.20.102
+2025 09/11 04:04:49 [   267,  NORMAL ] rayraw-11 [::init_device()] Connection done : 192.168.20.111
+2025 09/11 04:04:49 [   257,  NORMAL ] rayraw-1 [::init_device()] Connection done : 192.168.20.101
+2025 09/11 04:04:49 [   261,  NORMAL ] rayraw-5 [::init_device()] Connection done : 192.168.20.105
+2025 09/11 04:04:49 [   266,  NORMAL ] rayraw-10 [::init_device()] Connection done : 192.168.20.110
+2025 09/11 04:04:49 [   265,  NORMAL ] rayraw-9 [::init_device()] Connection done : 192.168.20.109
+2025 09/11 04:04:49 [   260,  NORMAL ] rayraw-4 [::init_device()] Connection done : 192.168.20.104
+2025 09/11 04:04:49 [   262,  NORMAL ] rayraw-6 [::init_device()] Connection done : 192.168.20.106
+2025 09/11 04:04:49 [   263,  NORMAL ] rayraw-7 [::init_device()] Connection done : 192.168.20.107
+2025 09/11 04:04:49 [   264,  NORMAL ] rayraw-8 [::init_device()] Connection done : 192.168.20.108
+2025 09/11 04:04:49 [   259,  NORMAL ] rayraw-3 [::init_device()] Connection done : 192.168.20.103
+2025 09/11 04:05:22 [ 90000,   ERROR ] == SenderThread: ERROR (Invalid Header): 0
+2025 09/11 04:05:22 [ 90000,  NORMAL ] ## BuilderThread : got STOP Command
+2025 09/11 04:05:22 [ 90000,  NORMAL ] EB: stop
+2025 09/11 04:05:22 [ 90000,  NORMAL ] == SenderThread: waiting for connection from client port:8900
+2025 09/11 04:05:22 [ 80000,  NORMAL ] ++ recDataSender : got STOP Command
+2025 09/11 04:05:24 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 09/11 04:05:24 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 09/11 04:05:24 [ 70000,  NORMAL ] Rec: ./data/run00053.dat closed

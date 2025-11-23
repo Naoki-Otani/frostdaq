@@ -1,0 +1,12 @@
+#############################
+# Don't change the Value
+#############################
+
+# setup of OSC_R
+
+# YAENAMI : value (OSC reset = 1)
+
+0 : 0
+1 : 0
+2 : 0
+3 : 0

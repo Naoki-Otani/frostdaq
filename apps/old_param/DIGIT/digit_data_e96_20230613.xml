@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<digit_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:noNamespaceSchemaLocation="schema/digit.xsd">
+
+  <device id="0xff" name="null"/>
+  <!--________________________________________________________________-->
+  <device id="22" name="Scaler">
+    <for var="plane" from="0" to="11"><plane id="plane">
+      <for var="ch" from="0" to="127"><ch id="ch">
+	<data id="0" name="scaler"/>
+      </ch></for>
+    </plane></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="23" name="HBXTFlag"><for var="seg" from="0" to="4">
+      <segment id="seg">
+	<ch id="0">
+          <data id="0" name="adc"/>
+          <data id="1" name="tdc"/>
+          <data id="2" name="trailing"/>
+          <data id="3" name="overflow"/>
+	</ch>
+      </segment></for>
+  </device>
+  <!--_________________________________________________________________-->
+  <device id="27" name="Ge">
+    <for var="seg" from="0" to="15">
+      <segment id="seg">
+	<ch id="0">
+	  <data id="0" name="adc"/>
+	  <data id="1" name="tfa_leading"/>
+	  <data id="2" name="tfa_trailing"/>
+	  <data id="3" name="tfa_overflow"/>
+	  <data id="4" name="crm_leading"/>
+	  <data id="5" name="crm_trailing"/>
+	  <data id="6" name="crm_overflow"/>
+          <data id="7" name="reset_time"/>
+	</ch>
+    </segment></for>
+  </device>
+  <!--_________________________________________________________________-->
+  <device id="114" name="BGO">
+    <for var="seg" from="0" to="47">
+      <segment id="seg">
+	<ch id="0">
+	  <data id="0" name="leading"/>
+	  <data id="1" name="trailing"/>
+	  <data id="2" name="overflow"/>
+	</ch>
+    </segment></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="83" name="HUL-RM">
+    <plane id="0" name="hul_hbx_scr1">
+      <ch id="0">
+	<data id="0" name="event"/>
+	<data id="1" name="spill"/>
+	<data id="2" name="sinc"/>
+	<data id="3" name="lock"/>
+      </ch>
+    </plane>
+    <plane id="1" name="hul_hbx_scr2">
+      <ch id="0">
+	<data id="0" name="event"/>
+	<data id="1" name="spill"/>
+	<data id="2" name="sinc"/>
+	<data id="3" name="lock"/>
+      </ch>
+    </plane>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="115" name="HUL-HRTDC">
+    <for var="seg" from="0" to="15">
+      <segment id="seg">
+	<ch id="0">
+          <data id="0" name="adc"/>
+          <data id="1" name="tdc"/>
+          <data id="2" name="trailing"/>
+          <data id="3" name="cstop"/>
+          <data id="4" name="overflow"/>
+	</ch>
+    </segment></for>
+  </device>
+  <!--________________________________________________________________-->
+  <device id="7" name="TOF" type="Hodo"><for var="seg" from="0" to="31">
+    <segment id="seg"><for var="UorD" from="0" to="1">
+      <ch id="UorD">
+        <data id="0" name="adc"/>
+        <data id="1" name="tdc"/>
+        <data id="2" name="trailing"/>
+        <data id="3" name="cstop"/>
+        <data id="4" name="overflow"/>
+      </ch></for>
+    </segment></for>
+  </device>
+  <!--_________________________________________________________________-->
+</digit_data>

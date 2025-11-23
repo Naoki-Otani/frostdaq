@@ -1,0 +1,61 @@
+#!/bin/bash
+
+SRC_DIR="/root/daq/data"
+DST_DIR="../datacopy"
+OUT_DIR="../output"
+LOG_DIR="../logs"
+EXTRACT_CMD="./extract_events"
+
+# Create log directory if it doesn't exist
+mkdir -p "$LOG_DIR"
+
+# Start and end event numbers
+start_event=0
+end_event=999
+
+# Infinite loop (runs every 1 minute)
+while true; do
+    # Determine today's log file
+    log_file="$LOG_DIR/$(date '+%Y-%m-%d').log"
+
+    # Get the latest .dat file
+    latest_file=$(ls -t "${SRC_DIR}"/*.dat 2>/dev/null | head -n 1)
+
+    if [ -z "$latest_file" ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S'): No .dat files found in ${SRC_DIR}" | tee -a "$log_file"
+        sleep 10
+        continue
+    fi
+
+    # Process file name
+    filename=$(basename "$latest_file")             # e.g. run00001.dat
+    base="${filename%.dat}"                        # e.g. run00001
+    copy_file="${DST_DIR}/${base}copy.dat"
+
+    # Copy the latest file
+    cp -f "$latest_file" "$copy_file"
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Copied $latest_file -> $copy_file" | tee -a "$log_file"
+
+    # Run extract_events and log output
+    output=$($EXTRACT_CMD "$copy_file" "$SRC_DIR" "$OUT_DIR" $start_event $end_event 2>&1)
+    echo "$output" | tee -a "$log_file"
+
+    # Extract the maximum event number from the output (last number in the line)
+    max_event=$(echo "$output" | grep "Max event number in file:" | grep -oE '[0-9]+$')
+
+    # Check if max_event is a numeric value
+    if [[ "$max_event" =~ ^[0-9]+$ ]]; then
+        # If there are at least end_event events, move to the next range
+        if [ "$max_event" -ge "$end_event" ]; then
+            start_event=$((start_event+1000))
+            end_event=$((end_event+1000))
+        else
+            echo "$(date '+%Y-%m-%d %H:%M:%S'): Max event ($max_event) < end_event ($end_event), retrying same range next loop." | tee -a "$log_file"
+        fi
+    else
+        echo "$(date '+%Y-%m-%d %H:%M:%S'): Could not determine max event number from output. Retrying same range." | tee -a "$log_file"
+    fi
+
+    # Wait 1 minute
+    sleep 10
+done

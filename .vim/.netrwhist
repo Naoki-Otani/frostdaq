@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/etc/chrony/conf.d'
+let g:netrw_dirhist_1='/mnt/c/Users/kuhep_guest'
+let g:netrw_dirhist_0='/root/daq/data'
+let g:netrw_dirhist_9='/root/apps/rayraw-control/setup'
+let g:netrw_dirhist_8='/root/apps/param/DIGIT'
+let g:netrw_dirhist_7='/root'
+let g:netrw_dirhist_6='/root/apps'
+let g:netrw_dirhist_5='/root/apps/param'
+let g:netrw_dirhist_4='/root/apps/param/CMAP'
+let g:netrw_dirhist_3='/root/apps/unpacker/bin'

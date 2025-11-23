@@ -1,0 +1,113 @@
+#!/bin/bash
+set -o pipefail
+
+SRC_DIR="/root/daq/data"
+DST_DIR="/root/daq/data/divideeventOut/datacopy"
+OUT_DIR="/root/daq/data/divideeventOut/output"
+LOG_DIR="/root/daq/data/divideeventOut/logs"
+EXTRACT_CMD="./extract_events"
+
+# remote server details
+REMOTE_USER="notani"
+REMOTE_HOST="login.cc.kek.jp"
+REMOTE_DIR="/group/nu/ninja/work/otani/rayraw/trackertestAtKyoto/data/20250923/"
+SSH_KEY="/root/.ssh/rsync_ed25519"   # パスフレーズ有りなら ssh-agent を使う（後述）
+SSH_OPTS="-o BatchMode=yes -o IdentitiesOnly=yes -o PreferredAuthentications=publickey -oStrictHostKeyChecking=accept-new -o UserKnownHostsFile=/root/.ssh/known_hosts -J sshcc1.kek.jp -i /root/.ssh/rsync_ed25519"
+[ -f "$SSH_KEY" ] && SSH_OPTS="$SSH_OPTS -i $SSH_KEY"
+
+# rsync common option（圧縮・タイムスタンプ保持・部分転送再開）
+RSYNC_OPTS="-az --partial --inplace --no-perms --chmod=ugo=rwX"
+
+# Create log/dst/out directory if it doesn't exist
+mkdir -p "$LOG_DIR"
+mkdir -p "$DST_DIR" "$OUT_DIR"
+
+# Start and end event numbers
+start_event=40000
+end_event=44999
+
+# Infinite loop (runs every 1 minute)
+while true; do
+    # Determine today's log file
+    log_file="$LOG_DIR/$(date '+%Y-%m-%d').log"
+
+    # Get the latest .dat file
+    latest_file=$(ls -t "${SRC_DIR}"/*.dat 2>/dev/null | head -n 1)
+
+    if [ -z "$latest_file" ]; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S'): No .dat files found in ${SRC_DIR}" | tee -a "$log_file"
+        sleep 1
+        continue
+    fi
+
+    # Process file name
+    filename=$(basename "$latest_file")             # e.g. run00001.dat
+    base="${filename%.dat}"                        # e.g. run00001
+    copy_file="${DST_DIR}/${base}copy.dat"
+
+    # Copy the latest file
+    # 追記だけコピー（既存部分が一致するか検証つき）
+    # -t: mtime維持, --inplace: 一時ファイルを使わず直接更新
+    # --append-verify: 既存部分を検証して差分(末尾)だけ追加。ソースが作り直されていたら自動で再コピーに切替
+    rsync -t --inplace --append-verify --no-perms \
+        "$latest_file" "$copy_file"
+
+    if [ $? -eq 0 ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): rsync(copy) OK: $latest_file -> $copy_file" | tee -a "$log_file"
+    else
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): rsync(copy) FAILED, fallback to cp" | tee -a "$log_file"
+    cp -f "$latest_file" "$copy_file" || { echo "cp fallback also failed"; continue; }
+    fi
+
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Copied $latest_file -> $copy_file" | tee -a "$log_file"
+
+    # === マーカー（この時刻以降の OUT_DIR 生成物を送る） ===
+    marker="$LOG_DIR/.marker_$(date +%s)"
+    : > "$marker"
+
+    # Run extract_events and log output
+    output=$($EXTRACT_CMD "$copy_file" "$OUT_DIR" $start_event $end_event 2>&1)
+    echo "$output" | tee -a "$log_file"
+
+    # Extract the maximum event number from the output (last number in the line)
+    max_event=$(echo "$output" | grep "Max event number in file:" | grep -oE '[0-9]+$')
+
+    if [[ "$max_event" =~ ^[0-9]+$ ]]; then
+        if [ "$max_event" -ge "$end_event" ]; then
+            # === 直前に生成されたファイルの絶対パスを null 区切りで作る（baseで絞り込み可） ===
+            # base 名で抽出したい場合は -name "${base}*" を付ける
+            mapfile -d '' new_files < <(find "$OUT_DIR" -type f -newer "$marker" -print0)
+
+            if [ "${#new_files[@]}" -eq 0 ]; then
+                echo "$(date '+%Y-%m-%d %H:%M:%S'): No new files to rsync" | tee -a "$log_file"
+            else
+                echo "$(date '+%Y-%m-%d %H:%M:%S'): Rsync ${#new_files[@]} file(s) to ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}" | tee -a "$log_file"
+
+                # null 区切りのリストを rsync --files-from=- --from0 に食わせる
+                # ソースは / にして、ファイルリストは絶対パスで渡す
+                {
+                    for f in "${new_files[@]}"; do
+			printf '%s\0' "$(basename -- "$f")"
+		    done
+                } | rsync $RSYNC_OPTS \
+                        --files-from=- --from0 \
+                        -e "ssh $SSH_OPTS" \
+                        "$OUT_DIR/" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/" \
+                        && echo "$(date '+%Y-%m-%d %H:%M:%S'): rsync OK" | tee -a "$log_file" \
+                        || echo "$(date '+%Y-%m-%d %H:%M:%S'): rsync FAILED" | tee -a "$log_file"
+            fi
+
+            # 次レンジへ
+            start_event=$((start_event+5000))
+            end_event=$((end_event+5000))
+        else
+            echo "$(date '+%Y-%m-%d %H:%M:%S'): Max event ($max_event) < end_event ($end_event), retrying same range." | tee -a "$log_file"
+        fi
+    else
+        echo "$(date '+%Y-%m-%d %H:%M:%S'): Could not determine max event number. Retrying same range." | tee -a "$log_file"
+    fi
+
+    rm -f "$marker"
+    # Wait 60 seconds
+    sleep 1
+done

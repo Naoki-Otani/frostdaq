@@ -1,0 +1,11 @@
+#############################
+# Don't change the Value
+#############################
+
+# setup of DIV_CONT
+# YAENAMI : value (PLL clock divide ratio : 0 ~ 3)
+
+0 : 0
+1 : 0
+2 : 0
+3 : 0

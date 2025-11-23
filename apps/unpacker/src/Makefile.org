@@ -1,0 +1,394 @@
+#!/usr/bin/make
+
+# Author: Tomonori Takahashi
+
+#### configuration ####
+color		:= 1
+arch		:= $(shell uname)
+SHELL		:= /bin/sh
+GCC		:= gcc
+CC		:= gcc
+CXX		:= g++
+OUT_PUT_OPT	:= -o
+LD		:= g++
+LDFLAGS		:= -lstdc++fs
+#LDFLAGS	:= -export-dynamic
+CXXFLAGS	:= -O3
+#CXXFLAGS	:= -Winline
+CXXFLAGS	+= -Wall -fPIC
+CXXFLAGS	+= -std=c++17
+# CXXFLAGS	+= -pg -p
+# optimize
+CXXFLAGS	+= $(subst x86_64,-m64,$(findstring x86_64,$(shell uname -m)))
+CXXFLAGS	+= -ftree-vectorize
+CXXFLAGS	+= -msse2
+#CXXFLAGS	+= -ftree-vectorizer-verbose=7
+DEBUGFLAGS	:= -pg -g
+DEBUGFLAGS	+= -DRANGE_CHECK
+#DEBUGFLAGS	+= -DDEQUE_BUFFER
+#DEBUGFLAGS	+= -DDEBUG_FIFO
+#DEBUGFLAGS	+= -DDIGIT_READ
+#DEBUGFLAGS	+= -DDIGIT_DEVICE
+#DEBUGFLAGS	+= -DDIGIT_PLANE
+#DEBUGFLAGS	+= -DDIGIT_SEGMENT
+#DEBUGFLAGS	= -DDIGIT_CH
+#DEBUGFLAGS	= -DDIGIT_DATA
+#DEBUGFLAGS	+= -DCHANNEL_MAP
+
+CXXFLAGS	+= $(DEBUGFLAGS)
+SOFLAGS		:= -shared
+#SOFLAGS	:= -shared -Wl,-soname,
+CPPFLAGS	+= $(addprefix -I,$(include_dir))
+
+#AR	:= ar
+CP	:= cp -f
+ECHO	:= /bin/echo -e
+MV	:= mv -f
+RM	:= rm -f
+SED	:= sed
+MAKE	:= gmake
+QUIET	:= @
+
+#### escape sequence ####
+ifeq ($(color),1)
+default_color	:= \033[0m
+black		:= \033[0;30;1m
+red		:= \033[0;31;1m
+green		:= \033[0;32;1m
+yellow		:= \033[0;33;1m
+blue		:= \033[0;34;1m
+magenta		:= \033[0;35;1m
+cyan		:= \033[0;36;1m
+white		:= \033[0;37;1m
+endif
+
+#### external libraries ####
+#xercescroot		:= /usr
+#xercesc_include	:= $(xercescroot)/include
+#CPPFLAGS		+= $(addprefix -I, $(xercesc_include))
+#xercesc_libdir		:= $(xercescroot)/lib64
+#xercesc_rpath		:= -Wl,-rpath,$(xercesc_libdir)
+#CPPFLAGS		+= -I$(PWD)
+
+# --- for kekcc --------------------------------------
+#kekcc			:= .cc.kek.jp
+#ifeq ($(findstring $(kekcc),$(HOSTNAME)),$(kekcc))
+#xercesc_include	:= $(include_dir)/xercesc
+#endif
+# ----------------------------------------------------
+
+ext_libs	:= -lz -lbz2 -lpthread -lxerces-c
+# $(xercesc_rpath) -L$(xercesc_libdir) -lxerces-c
+
+#### HD DAQ ####
+src_top_dir	:= $(PWD)
+include_dir	:= ../include
+lib_dir		:= ../lib
+schema_dir	:= ../schema
+bin_dir		:= ../bin
+
+packages	:= $(filter-out -%,$(shell cat Unpacker_Packages.txt))
+rpath_dir	:= $(subst src,lib,$(src_top_dir))
+
+script_dir	:= script
+script_src	:= $(script_dir)/unpacker-config
+script_obj	:= $(bin_dir)/unpacker-config
+
+#=== following variables are filled
+#    after reading Packages.mk files in sub-directories
+sources		:=
+headers		:=
+package_headers	:=
+objects		:=
+dependencies	:=
+libraries	:=
+links		:=
+lib_pack	:= $(lib_dir)/libHDDAQUnpacker.so
+
+################################################################################
+.PHONY: all
+
+all:
+
+include $(addsuffix /Package.mk,$(packages))
+
+#_______________________________________________________________________________
+###########
+# package #
+###########
+#.PHONY: show_package
+
+define make-packages
+ $(foreach filename,$(packages),$(call make-one-package,$(filename)))
+endef
+
+define make-one-package
+ package_$1	:= $1
+ $1_src		:= $(filter $1/src/%,$(sources))
+ $1_obj		:= $(filter $1/src/%,$(objects))
+ $1_header	:= $(filter $1/include/%,$(package_headers))
+ $1_lib		:= $(addprefix $(lib_dir)/lib,\
+	$(notdir $(filter $1/src/%,$(subst .cc,.so,$(sources)))))
+ # $1_link	:= $(patsubst $1/src/%.cc,-l%,$(filter $1/src/%,$(sources)))
+ $1_link	:= -L$(rpath_dir) \
+	$(patsubst $1/src/%.cc,-l%,$(filter $1/src/%,$(sources)))
+ # $1_link	:= -L$(lib_dir) \
+ # 	$(patsubst $1/src/%.cc,-l%,$(filter $1/src/%,$(sources)))
+
+endef
+
+$(eval $(call make-packages))
+
+
+#_______________________________________________________________________________
+
+dependencies	+= $(subst .o,.d,$(objects))
+
+core_objs := \
+ $(utility_obj) \
+ $(kol_obj) \
+ $(stream_obj) \
+ $(unpacker_obj) \
+ $(evaluator_obj) \
+ $(xml_obj) \
+ $(thread_obj)
+
+core_libs := \
+ $(utility_lib) \
+ $(kol_lib) \
+ $(stream_lib) \
+ $(unpacker_lib) \
+ $(evaluator_lib) \
+ $(xml_lib) \
+ $(thread_lib)
+
+core_links := \
+ $(ext_libs) \
+ -Wl,-rpath,$(rpath_dir)\
+ $(utility_link) \
+ $(kol_link) \
+ $(stream_link) \
+ $(unpacker_link) \
+ $(evaluator_link) \
+ $(xml_link) \
+ $(thread_link)
+
+#ext_xml_link	:= -lxerces-c -lxalan-c
+#apps		:= $(bin_dir)/offlineEventBuilder
+
+# --- for kekcc -------------------------------------------------
+ifeq ($(findstring $(kekcc),$(HOSTNAME)),$(kekcc))
+all: $(xercesc_include) $(headers) $(lib_pack) $(script_obj)# $(apps)
+#----------------------------------------------------------------
+else
+all: $(headers) $(lib_pack) $(script_obj)# $(apps)
+endif
+
+#_______________________________________________________________________________
+# --- for kekcc -------------------------------------------------
+#ifeq ($(findstring $(kekcc),$(HOSTNAME)),$(kekcc))
+#.PHONY: xercesc_include
+#
+#$(xercesc_include):
+#	ln -s /usr/include/xercesc $@
+#endif
+# ---------------------------------------------------------------
+
+#_______________________________________________________________________________
+.PHONY: script
+script: $(script_obj)
+$(script_obj): $(script_src)
+	$(QUIET) $(ECHO) "$(green)==== copy script$(default_color)"
+	$(CP) $^ $@
+
+#_______________________________________________________________________________
+.PHONY: headers
+
+# usage $(call copy-headers)
+define copy-headers
+ $(foreach filename,\
+   $(package_headers),\
+   $(eval $(call copy-one-header,$(filename))))
+endef
+
+# usage $(call copy-one-header,original)
+define copy-one-header
+ $(addprefix $(include_dir)/,$(notdir $1)): $1
+	$(CP) $$< $$@;
+endef
+
+$(eval $(call copy-headers))
+
+#_______________________________________________________________________________
+.PHONY: dependencies
+
+# usage $(call make-depend,source-file,object-file,depend-file)
+define make-depend
+ $(QUIET) $(ECHO) "$(cyan)==== make dependency$(default_color)"
+ $(GCC) -MM         \
+        -MF $3      \
+	-MP         \
+	-MT $2      \
+	$(CFLAGS)   \
+	$(CPPFLAGS) \
+	$1
+endef
+
+#_______________________________________________________________________________
+.PHONY: objects
+
+objects: $(objects)
+
+%.o: %.cc
+	$(call make-depend,$<,$@,$(subst .o,.d,$@))
+	$(QUIET) $(ECHO) "$(green)=== compiling $@$(default_color)"
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OUT_PUT_OPT) $@ -c $<
+
+#_______________________________________________________________________________
+.PHONY: libraries
+
+# usage $(call install-libs)
+define install-libs
+ $(foreach filename, $(objects), $(call obj-to-lib, $(filename)))
+
+endef
+
+#usage $(call obj-to-lib,object-to-be-converted-to-lib)
+define obj-to-lib
+ $(addprefix $(lib_dir)/lib,$(subst .o,.so,$(notdir $1))):\
+ $(strip $1)
+	$(QUIET) $(ECHO) "$(yellow)===== create library $$@$(default_color)";
+# $(QUIET) $(ECHO) "      $$^";
+# $(QUIET) $(ECHO) "      ->    $$@$(default_color)";
+	$(LD) $(SOFLAGS) $(LDFLAGS) $$^ $(OUT_PUT_OPT) $$@;
+
+endef
+
+$(lib_pack): $(core_libs)
+	$(QUIET) $(ECHO) "$(yellow)===== create Library ====="
+	$(QUIET) $(ECHO) "      $^"
+	$(QUIET) $(ECHO) "      ->    $@$(default_color)"
+	$(LD) \
+        $(OUT_PUT_OPT) $@ \
+        $(SOFLAGS) $(LDFLAGS) $(core_links)
+	$(LD) $(SOFLAGS) $(OUT_PUT_OPT) ../lib/libFullUnpacker.so \
+        $(LDFLAGS) $(core_objs) $(ext_libs)
+
+$(eval $(call install-libs))
+
+#_______________________________________________________________________________
+#.PHONY: apps
+#
+#$(bin_dir)/offlineEventBuilder: app/src/offlineEventBuilder.o $(lib_pack)
+#	$(QUIET) $(ECHO) "==== create program ===="
+#	$(QUIET) $(ECHO) "      $^"
+#	$(QUIET) $(ECHO) "      ->    $@"
+#	$(LD) $< \
+#        $(OUT_PUT_OPT) $@ \
+#	-Wl,-rpath,$(rpath_dir) -L$(rpath_dir) -lHDDAQUnpacker
+
+#_______________________________________________________________________________
+.PHONY: show
+
+show:
+#	$(QUIET) $(ECHO) "==== system defualt ===="
+#	$(QUIET) $(ECHO) "COMPILE.C     := $(COMPILE.C)"
+#	$(QUIET) $(ECHO) "COMPILE.cc    := $(COMPILE.cc)"
+#	$(QUIET) $(ECHO) "OUTPUT_OPTION := $(OUTPUT_OPTION)"
+#	$(QUIET) $(ECHO) "TARGET_ARCH   := $(TARGET_ARCH)"
+#	$(QUIET) $(ECHO) ".LIBPATTERNS   = $(.LIBPATTERNS)"
+	$(QUIET) $(ECHO) "==== configuration ===="
+	$(QUIET) $(ECHO) "arch        := $(arch)"
+	$(QUIET) $(ECHO) "SHELL       := $(SHELL)"
+	$(QUIET) $(ECHO) "GCC         := $(GCC)"
+	$(QUIET) $(ECHO) "CC          := $(CC)"
+	$(QUIET) $(ECHO) "CXX         := $(CXX)"
+	$(QUIET) $(ECHO) "OUT_PUT_OPT := $(OUT_PUT_OPT)"
+	$(QUIET) $(ECHO) "LD          := $(LD)"
+	$(QUIET) $(ECHO) "LDFLAGS     := $(LDFLAGS)"
+	$(QUIET) $(ECHO) "CXXFLAGS    := $(CXXFLAGS)"
+	$(QUIET) $(ECHO) "DEBUGFLAGS  := $(DEBUGFLAGS)"
+	$(QUIET) $(ECHO) "SOFLAGS     := $(SOFLAGS)"
+	$(QUIET) $(ECHO) "CPPFLAGS     = $(CPPFLAGS)"
+	$(QUIET) $(ECHO) "AR    := $(AR)"
+	$(QUIET) $(ECHO) "CP    := $(CP)"
+	$(QUIET) $(ECHO) "MV    := $(MV)"
+	$(QUIET) $(ECHO) "RM    := $(RM)"
+	$(QUIET) $(ECHO) "SED   := $(SED)"
+	$(QUIET) $(ECHO) "MAKE  := $(MAKE)"
+	$(QUIET) $(ECHO) "QUIET := $(QUIET)"
+	$(QUIET) $(ECHO) "==== external ================================="
+	$(QUIET) $(ECHO) "ext_libs         := $(ext_libs)"
+	$(QUIET) $(ECHO) "xercesc_include  := $(xercesc_include)"
+	$(QUIET) $(ECHO) "==== HD Unpacker =============================="
+	$(QUIET) $(ECHO) "src_top_dir            := $(src_top_dir)"
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "include_dir            := $(include_dir)"
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "lib_dir                := $(lib_dir)"
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "schema_dir             := $(schema_dir)"
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "packages :="
+	$(QUIET) for f in $(packages); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "sources  :="
+	$(QUIET) for f in $(sources); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "headers  :="
+	$(QUIET) for f in $(headers); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "package_headers :="
+	$(QUIET) for f in $(package_headers); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "objects :="
+	$(QUIET) for f in $(objects); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "dependencies :="
+	$(QUIET) for f in $(dependencies); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "libraries :="
+	$(QUIET) for f in $(libraries); do $(ECHO) "  $$f"; done;
+	$(QUIET) $(ECHO) "library path :=  $(rpath_dir)"
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "core_links := " $(core_links)
+	$(QUIET) $(ECHO) ""
+	$(QUIET) $(ECHO) "applicatons:= " $(apps)
+
+#_______________________________________________________________________________
+.PHONY: clean
+
+clean:
+	$(RM) *~ $(schema_dir)/*~
+	$(RM) app/src/*~ app/src/*.d app/src/*.o
+	for m in $(packages); \
+	do \
+	   $(RM) $$m/*~ \
+                 $$m/include/*~ \
+                 $$m/src/*~ \
+                 $$m/src/*.o \
+                 $$m/src/*.d; \
+	done ;
+
+#_______________________________________________________________________________
+.PHONY: distclean
+
+distclean:
+	$(RM) *~ $(include_dir)/* $(lib_dir)/* $(schema_dir)/*~
+	$(RM) $(bin_dir)/*
+	$(RM) app/src/*~ app/src/*.d app/src/*.o
+	for m in $(packages); \
+	do \
+	   $(RM) $$m/*~ \
+                 $$m/include/*~ \
+                 $$m/src/*~ \
+                 $$m/src/*.o \
+                 $$m/src/*.d; \
+	done ;
+
+
+ifneq "$(MAKECMDGOALS)" "clean"
+ ifneq "$(MAKECMDGOALS)" "distclean"
+  -include $(dependencies)
+ endif
+endif

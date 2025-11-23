@@ -1,0 +1,1967 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<channel_map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="schema/channel_map.xsd">
+
+  <!--________________________________________________________________-->
+  <DAQNode node_id="1" name="k18eb">
+    <!--________________________________________________________________-->
+    <VmeMaster node_id="0x201" name="vme01">
+      <VmeRm address="0xff010000">
+      	<for var="ch" from="0" to="1"><for var="data" from="0" to="3">
+      	  <FE ch="ch" data="data">
+      	  <D Device="VME-RM" Plane="vme01" ch="ch" data="data"/></FE>
+      	</for></for>
+      </VmeRm>
+      <VmeCaenV792 address="0xad010000">
+	<FE ch="0"><D Device="BAC" segment="0" ch="0" data="0"/></FE>
+	<FE ch="1"><D Device="HTOF" segment="31" ch="0" data="0"/></FE>
+    	<!--_channel 2 is dead (2023 04 06)_-->
+	<FE ch="2"><D Device="HTOF" segment="32" ch="0" data="0"/></FE>
+	<FE ch="3"><D Device="HTOF" segment="33" ch="0" data="0"/></FE>
+	<FE ch="4"><D Device="HTOF" segment="31" ch="1" data="0"/></FE>
+	<FE ch="5"><D Device="HTOF" segment="32" ch="1" data="0"/></FE>
+	<FE ch="6"><D Device="HTOF" segment="33" ch="1" data="0"/></FE>
+    	<for var="ch" from="7" to="15">
+    	  <FE ch="ch"><D Device="VMEdummy" plane="0" segment="ch" data="0"/></FE>
+	</for>
+	<for var="ch" from="0" to="7">
+	  <FE ch="ch+16"><D Device="BH2" segment="ch" ch="0" data="0"/></FE>
+	</for>
+	<for var="ch" from="0" to="7">
+    	  <FE ch="ch+24"><D Device="BH2" segment="ch" ch="1" data="0"/></FE>
+    	</for>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0xad020000">
+	<for var="ch" from="0" to="7">
+    	<!--_channel 0*2,1*2,4*2 is dead (2023 04 06)_-->
+	  <FE ch="ch*2"><D Device="VMEdummy" plane="1" segment="ch" data="0"/></FE>
+	</for>
+	<for var="ch" from="0" to="7">
+    	  <FE ch="(ch+8)*2"><D Device="VMEdummy" plane="1" segment="ch" data="0"/></FE>
+    	</for>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0xad030000">
+        <for var="ch" from="0" to="12">
+          <FE ch="ch"><D Device="TOF" segment="ch" ch="0" data="0"/></FE>
+        </for>
+        <FE ch="13"><D Device="VMEdummy" plane="2" segment="13" data="0"/></FE>
+        <FE ch="14"><D Device="TOF" segment="14" ch="0" data="0"/></FE>
+        <FE ch="15"><D Device="VMEdummy" plane="2" segment="15" data="0"/></FE>
+        <for var="ch" from="16" to="17">
+          <FE ch="ch"><D Device="TOF" segment="ch" ch="0" data="0"/></FE>
+        </for>
+        <FE ch="18"><D Device="VMEdummy" plane="2" segment="18" data="0"/></FE>
+        <FE ch="19"><D Device="TOF" segment="15" ch="0" data="0"/></FE>
+        <FE ch="20"><D Device="TOF" segment="13" ch="0" data="0"/></FE>
+        <for var="ch" from="21" to="31">
+          <FE ch="ch"><D Device="VMEdummy" plane="2" segment="ch" data="0"/></FE>
+        </for>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0xad040000">
+        <for var="ch" from="0" to="4">
+          <FE ch="ch"><D Device="TOF" segment="ch" ch="1" data="0"/></FE>
+        </for>
+        <FE ch="5"><D Device="VMEdummy" plane="3" segment="5" data="0"/></FE>
+        <for var="ch" from="6" to="12">
+          <FE ch="ch"><D Device="TOF" segment="ch" ch="1" data="0"/></FE>
+        </for>
+        <FE ch="13"><D Device="VMEdummy" plane="3" segment="13" data="0"/></FE>
+        <for var="ch" from="14" to="16">
+          <FE ch="ch"><D Device="TOF" segment="ch" ch="1" data="0"/></FE>
+        </for>
+	<for var="ch" from="17" to="25">
+          <FE ch="ch"><D Device="VMEdummy" plane="3" segment="ch" data="0"/></FE>
+        </for>
+        <FE ch="26"><D Device="TOF" segment="5" ch="1" data="0"/></FE>
+        <FE ch="27"><D Device="VMEdummy" plane="3" segment="27" data="0"/></FE>
+        <FE ch="28"><D Device="TOF" segment="13" ch="1" data="0"/></FE>
+        <FE ch="29"><D Device="TOF" segment="17" ch="1" data="0"/></FE>
+        <FE ch="30"><D Device="VMEdummy" plane="3" segment="30" data="0"/></FE>
+        <FE ch="31"><D Device="VMEdummy" plane="3" segment="31" data="0"/></FE>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0xad050000">
+    	<FE ch="0"><D Device="BH1" segment="0" ch="0" data="0"/></FE>
+    	<FE ch="1"><D Device="BH1" segment="1" ch="0" data="0"/></FE>
+    	<FE ch="2"><D Device="BH1" segment="2" ch="0" data="0"/></FE>
+    	<FE ch="3"><D Device="BH1" segment="3" ch="0" data="0"/></FE>
+    	<FE ch="4"><D Device="BH1" segment="4" ch="0" data="0"/></FE>
+    	<FE ch="5"><D Device="BH1" segment="5" ch="0" data="0"/></FE>
+    	<FE ch="6"><D Device="BH1" segment="6" ch="0" data="0"/></FE>
+    	<FE ch="7"><D Device="BH1" segment="7" ch="0" data="0"/></FE>
+    	<FE ch="8"><D Device="BH1" segment="8" ch="0" data="0"/></FE>
+    	<FE ch="9"><D Device="BH1" segment="9" ch="0" data="0"/></FE>
+    	<FE ch="10"><D Device="BH1" segment="10" ch="0" data="0"/></FE>
+    	<for var="ch" from="11" to="15">
+    	  <FE ch="ch"><D Device="VMEdummy" plane="0" segment="ch" data="0"/></FE>
+    	</for>
+    	<FE ch="16"><D Device="BH1" segment="0" ch="1" data="0"/></FE>
+    	<FE ch="17"><D Device="BH1" segment="1" ch="1" data="0"/></FE>
+    	<FE ch="18"><D Device="BH1" segment="2" ch="1" data="0"/></FE>
+    	<FE ch="19"><D Device="BH1" segment="3" ch="1" data="0"/></FE>
+    	<FE ch="20"><D Device="BH1" segment="4" ch="1" data="0"/></FE>
+    	<FE ch="21"><D Device="BH1" segment="5" ch="1" data="0"/></FE>
+    	<FE ch="22"><D Device="BH1" segment="6" ch="1" data="0"/></FE>
+    	<FE ch="23"><D Device="BH1" segment="7" ch="1" data="0"/></FE>
+    	<FE ch="24"><D Device="BH1" segment="8" ch="1" data="0"/></FE>
+    	<FE ch="25"><D Device="BH1" segment="9" ch="1" data="0"/></FE>
+    	<FE ch="26"><D Device="BH1" segment="10" ch="1" data="0"/></FE>
+    	<for var="ch" from="27" to="31">
+    	  <FE ch="ch"><D Device="VMEdummy" plane="0" segment="ch" data="0"/></FE>
+    	</for>
+      </VmeCaenV792>
+    </VmeMaster>
+    <!--________________________________________________________________-->
+    <VmeMaster node_id="0x202" name="vme02">
+      <VmeRm address="0xff020000">
+      	<for var="ch" from="0" to="1"><for var="data" from="0" to="3">
+      	  <FE ch="ch" data="data">
+      	  <D Device="VME-RM" Plane="vme02" ch="ch" data="data"/></FE>
+      	</for></for>
+      </VmeRm>
+      <VmeCaenV792 address="0x00110000">
+	<!-- WC-U-1~12 -->
+	<for var = "ch" from="0" to="11">
+	  <FE ch="ch"><D Device="WC" segment="ch" ch="0" data="0"/></FE>
+	</for>
+	<FE ch="12"><D Device="VMEdummy"/></FE>
+	<FE ch="13"><D Device="VMEdummy"/></FE>
+	<FE ch="14"><D Device="VMEdummy"/></FE>
+	<FE ch="15"><D Device="VMEdummy"/></FE>
+	<FE ch="16"><D Device="WC" segment="0" ch="1" data="0"/></FE>
+	<FE ch="17"><D Device="WC" segment="1" ch="1" data="0"/></FE>
+	<FE ch="18"><D Device="WC" segment="2" ch="1" data="0"/></FE>
+	<FE ch="19"><D Device="WC" segment="3" ch="1" data="0"/></FE>
+	<FE ch="20"><D Device="WC" segment="4" ch="1" data="0"/></FE>
+	<FE ch="21"><D Device="WC" segment="5" ch="1" data="0"/></FE>
+	<FE ch="22"><D Device="VMEdummy"/></FE> <!-- dead -->
+	<FE ch="23"><D Device="WC" segment="7" ch="1" data="0"/></FE>
+	<FE ch="24"><D Device="WC" segment="8" ch="1" data="0"/></FE>
+	<FE ch="25"><D Device="VMEdummy"/></FE> <!-- dead -->
+	<FE ch="26"><D Device="WC" segment="10" ch="1" data="0"/></FE>
+	<FE ch="27"><D Device="WC" segment="11" ch="1" data="0"/></FE>
+	<FE ch="28"><D Device="WC" segment="6" ch="1" data="0"/></FE>
+	<FE ch="29"><D Device="WC" segment="9" ch="1" data="0"/></FE>
+	<FE ch="30"><D Device="VMEdummy"/></FE>
+	<FE ch="31"><D Device="VMEdummy"/></FE>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0x00120000">
+	<for var="ch" from="0" to="11">
+	  <FE ch="ch"><D Device="WC" segment="ch" ch="2" data="0"/></FE>
+	</for>
+	<for var="ch" from="12" to="31">
+	  <FE ch="ch"><D Device="VMEdummy"/></FE>
+	</for>
+      </VmeCaenV792>
+      <VmeCaenV792 address="0x00130000">
+	<FE ch="0"><D Device="E72BAC" segment="0" ch="0" data="0"/></FE>
+	<FE ch="1"><D Device="E90SAC" segment="0" ch="0" data="0"/></FE>
+	<FE ch="2"><D Device="E90SAC" segment="1" ch="0" data="0"/></FE>
+	<FE ch="3"><D Device="E72KVC" segment="0" ch="0" data="0"/></FE>
+	<FE ch="4"><D Device="E72KVC" segment="0" ch="1" data="0"/></FE>
+	<FE ch="5"><D Device="E72KVC" segment="0" ch="2" data="0"/></FE>
+	<FE ch="6"><D Device="E72KVC" segment="1" ch="0" data="0"/></FE>
+	<FE ch="7"><D Device="E72KVC" segment="1" ch="1" data="0"/></FE>
+	<FE ch="8"><D Device="E72KVC" segment="1" ch="2" data="0"/></FE>
+	<FE ch="9"><D Device="E72KVC" segment="2" ch="0" data="0"/></FE>
+	<FE ch="10"><D Device="E72KVC" segment="2" ch="1" data="0"/></FE>
+	<FE ch="11"><D Device="E72KVC" segment="2" ch="2" data="0"/></FE>
+	<FE ch="12"><D Device="E72KVC" segment="3" ch="0" data="0"/></FE>
+	<FE ch="13"><D Device="E72KVC" segment="3" ch="1" data="0"/></FE>
+	<FE ch="14"><D Device="E72KVC" segment="3" ch="2" data="0"/></FE>
+	<FE ch="15"><D Device="E42BH2" segment="3" ch="0" data="0"/></FE>
+	<FE ch="16"><D Device="E42BH2" segment="3" ch="1" data="0"/></FE>
+	<for var="ch" from="17" to="31">
+	  <FE ch="ch"><D Device="VMEdummy" plane="13" segment="ch" data="0"/></FE>
+	</for>
+      </VmeCaenV792>
+    </VmeMaster>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="0x611" name="hul02sdc-1">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="data" from="0" to="3">
+  	<FE ch="0" data="data + 3"><D Device="HUL-RM" plane="hul02sdc_1" ch="0" data="data"/></FE>
+      </for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x612" name="hul02sdc-2">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="0" ch="ch + 64" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="1" ch="95 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="1" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x613" name="hul02sdc-3">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="1" ch="95 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="1" ch="159 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="2" ch="191 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x614" name="hul02sdc-4">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="2" ch="63 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="3" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="3" ch="ch - 32" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x615" name="hul02sdc-5">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="3" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC3" plane="3" ch="ch - 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="0" ch="191 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x616" name="hul02sdc-6">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="0" ch="63 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="1" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="1" ch="ch - 32" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x617" name="hul02sdc-7">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="1" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="1" ch="ch - 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="127"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC4" plane="2" ch="ch - 64" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x618" name="hul02sdc-8">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="2" ch="ch + 64" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="3" ch="95 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="3" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x619" name="hul02sdc-9">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="3" ch="95 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="SDC4" plane="3" ch="159 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="127"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="0" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x61a" name="hul02sdc-10">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="0" ch="31 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="1" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="1" ch="ch - 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="1" ch="ch - 96" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x61b" name="hul02sdc-11">
+      <for var="ch" from="0" to="127"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="2" ch="ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <HulMHTdc node_id="0x61c" name="hul02sdc-12">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="3" ch="31 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="3" ch="95 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="3" ch="159 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="96" to="127"><for var="data" from="0" to="2">
+      	  <FE ch="ch" data="data"><D Device="SDC5" plane="3" ch="223 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--__LAC___________________________________________________________-->
+    <HulMHTdc node_id="0x630" name="hul02lac">
+      <for var="data" from="0" to="2">
+	<for var="ch" from="0" to="11">
+	  <FE ch="ch" data="data"><D Device="WC" segment="ch" ch="0" data="data+1"/></FE>
+	</for>
+	<for var="ch" from="12" to="15">
+	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" data="data"/></FE>
+	</for>
+	<for var="ch" from="0" to="11">
+	  <FE ch="ch+16" data="data"><D Device="WC" segment="ch" ch="1" data="data+1"/></FE>
+	</for>
+	<for var="ch" from="28" to="63">
+	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" data="data"/></FE>
+	</for>
+	<for var="ch" from="0" to="11">
+	  <FE ch="ch+64" data="data"><D Device="WC" segment="ch" ch="2" data="data+1"/></FE>
+	</for>
+	<for var="ch" from="76" to="95">
+	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" data="data"/></FE>
+	</for>
+	<for var="ch" from="0" to="29">
+	  <FE ch="ch+96"  data="data"><D Device="LAC" segment="ch" data="data+1"/></FE>
+	</for>
+	<for var="ch" from="126" to="127">
+	  <FE ch="ch"  data="data"><D Device="HULMHTDCdummy" data="data"/></FE>
+	</for>
+      </for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="0x631" name="hul02misc-1">
+      <for var="data" from="0" to="2">
+	<for var="ch" from="0" to="1">
+          <FE ch="ch" data="data"><D Device="BAC" segment="ch" data="data + 1"/></FE>
+	</for>
+	<for var="ch" from="0" to="3">
+          <FE ch="ch+2" data="data"><D Device="BVH" segment="ch" data="data + 1"/></FE>
+	</for>
+        <FE ch="10" data="data"><D Device="TFlag" segment="31" data="data + 1"/></FE>
+	<for var="ch" from="11" to="15">
+          <FE ch="ch" data="data"><D Device="TFlag" segment="ch - 11" data="data + 1"/></FE>
+	</for>
+	<for var="ch" from="16" to="31">
+    	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE>
+	</for>
+	<for var="ch" from="32" to="46">
+          <FE ch="ch" data="data"><D Device="TFlag" segment="ch - 27" data="data + 1"/></FE>
+	</for>
+    	<FE ch="47" data="data"><D Device="HULMHTDCdummy" plane="0" ch="47" data="data"/></FE>
+	<for var="ch" from="48" to="58">
+          <FE ch="ch" data="data"><D Device="TFlag" segment="ch - 28" data="data + 1"/></FE>
+	</for>
+	<for var="ch" from="59" to="127">
+    	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE>
+	</for>
+      </for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulScaler node_id="0x601" name="hul01scr-1">
+      <for var="ch" from="0" to="127">
+    	  <FE ch="ch" data="0"><D Device="Scaler" plane="0" ch="ch" data="0"/></FE>
+      </for>
+      <for var="data" from="0" to="3">
+    	<FE ch="0" data="data + 1"><D Device="HUL-RM" plane="hul01scr_1" ch="0" data="data"/></FE>
+      </for>
+    </HulScaler>
+    <!-- ________________________________________________________________ -->
+    <HulScaler node_id="0x602" name="hul01scr-2">
+      <for var="ch" from="0" to="63">
+    	  <FE ch="ch" data="0"><D Device="Scaler" plane="1" ch="ch" data="0"/></FE>
+      </for>
+      <for var="data" from="0" to="3">
+    	<FE ch="0" data="data + 1"><D Device="HUL-RM" plane="hul01scr_2" ch="0" data="data"/></FE>
+      </for>
+    </HulScaler>
+    <!-- ________________________________________________________________ -->
+    <HulScaler node_id="0x603" name="hul01scr-3">
+      <for var="data" from="0" to="3">
+    	<FE ch="0" data="data + 1"><D Device="HUL-RM" plane="hul01scr_3" ch="0" data="data"/></FE>
+      </for>
+      <for var="ch" from="0" to="61">
+      	  <FE ch="ch" data="0"><D Device="Scaler" plane="2" ch="ch" data="0"/></FE>
+      </for>
+      <FE ch="62" data="0"><D Device="UnixTime" plane="0" ch="0" data="0"/></FE>
+      <FE ch="63" data="0"><D Device="UnixTime" plane="0" ch="0" data="1"/></FE>
+    </HulScaler>
+    <!--________________________________________________________________-->
+    <HulScaler node_id="0x604" name="hul01scr-4">
+      <for var="ch" from="0" to="127">
+    	  <FE ch="ch" data="0"><D Device="Scaler" plane="3" ch="ch" data="0"/></FE>
+      </for>
+      <for var="data" from="0" to="3">
+    	<FE ch="0" data="data + 1"><D Device="HUL-RM" plane="hul01scr_4" ch="0" data="data"/></FE>
+      </for>
+    </HulScaler>
+    <!--________________________________________________________________-->
+    <HulHRTdc node_id="0x606" name="hul01hr-1">
+     <for var="ch" from="0" to="7"><for var="data" from="0" to="3">
+       <FE ch="ch" data="data"><D Device="BH2" segment="ch" ch="0" data="data + 1"/>
+     </FE></for></for>
+     <for var="ch" from="0" to="7"><for var="data" from="0" to="3">
+       <FE ch="ch+8" data="data"><D Device="BH2" segment="ch" ch="1" data="data + 1"/>
+     </FE></for></for>
+     <for var="ch" from="16" to="63"><for var="data" from="0" to="3">
+       <FE ch="ch" data="data"><D Device="HR-TDCdummy" plane="0" segment="ch" ch="0" data="data"/>
+     </FE></for></for>
+    </HulHRTdc>
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="0x607" name="hul01hr-2">
+      <for var="ch" from="0" to="17"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="TOF" segment="ch" ch="0" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="18" to="35"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="TOF" segment="ch - 18" ch="1" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="36" to="63"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HR-TDCdummy" plane="1" segment="ch" ch="0" data="data"/>
+      </FE></for></for>
+    </HulHRTdc>
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="0x608" name="hul01hr-3">
+      <for var="ch" from="0" to="10"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="BH1" segment="ch" ch="0" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="11" to="15"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HR-TDCdummy" plane="1" segment="ch" ch="0" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="26"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="BH1" segment="ch - 16" ch="1" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="27" to="63"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HR-TDCdummy" plane="1" segment="ch" ch="0" data="data"/>
+      </FE></for></for>
+    </HulHRTdc>
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="1545" name="hul01hr-4">
+      <for var="data" from="0" to="3">
+	<FE ch="0" data="data"><D Device="E72BAC" segment="0" ch="0" data="data + 1"/></FE>
+	<FE ch="1" data="data"><D Device="E90SAC" segment="0" ch="0" data="data + 1"/></FE>
+	<FE ch="2" data="data"><D Device="E90SAC" segment="1" ch="0" data="data + 1"/></FE>
+	<FE ch="3" data="data"><D Device="E72KVC" segment="0" ch="0" data="data + 1"/></FE>
+	<FE ch="4" data="data"><D Device="E72KVC" segment="0" ch="1" data="data + 1"/></FE>
+	<FE ch="5" data="data"><D Device="E72KVC" segment="0" ch="2" data="data + 1"/></FE>
+	<FE ch="6" data="data"><D Device="E72KVC" segment="1" ch="0" data="data + 1"/></FE>
+	<FE ch="7" data="data"><D Device="E72KVC" segment="1" ch="1" data="data + 1"/></FE>
+	<FE ch="8" data="data"><D Device="E72KVC" segment="1" ch="2" data="data + 1"/></FE>
+	<FE ch="9" data="data"><D Device="E72KVC" segment="2" ch="0" data="data + 1"/></FE>
+	<FE ch="10" data="data"><D Device="E72KVC" segment="2" ch="1" data="data + 1"/></FE>
+	<FE ch="11" data="data"><D Device="E72KVC" segment="2" ch="2" data="data + 1"/></FE>
+	<FE ch="12" data="data"><D Device="E72KVC" segment="3" ch="0" data="data + 1"/></FE>
+	<FE ch="13" data="data"><D Device="E72KVC" segment="3" ch="1" data="data + 1"/></FE>
+	<FE ch="14" data="data"><D Device="E72KVC" segment="3" ch="2" data="data + 1"/></FE>
+	<FE ch="15" data="data"><D Device="HR-TDCdummy" plane="4" segment="15" data="data"/></FE>
+	<FE ch="16" data="data"><D Device="E42BH2" segment="3" ch="0" data="data + 1"/></FE>
+	<FE ch="17" data="data"><D Device="E42BH2" segment="3" ch="1" data="data + 1"/></FE>
+	<FE ch="18" data="data"><D Device="E42BH2" segment="0" ch="2" data="data + 1"/></FE>
+	<FE ch="19" data="data"><D Device="E42BH2" segment="1" ch="2" data="data + 1"/></FE>
+	<FE ch="20" data="data"><D Device="E42BH2" segment="2" ch="2" data="data + 1"/></FE>
+	<FE ch="21" data="data"><D Device="E42BH2" segment="3" ch="2" data="data + 1"/></FE>
+	<FE ch="22" data="data"><D Device="E42BH2" segment="4" ch="2" data="data + 1"/></FE>
+	<FE ch="23" data="data"><D Device="E42BH2" segment="5" ch="2" data="data + 1"/></FE>
+	<FE ch="24" data="data"><D Device="E42BH2" segment="6" ch="2" data="data + 1"/></FE>
+	<FE ch="25" data="data"><D Device="E42BH2" segment="7" ch="2" data="data + 1"/></FE>
+	<FE ch="26" data="data"><D Device="T1" segment="0" ch="0" data="data + 1"/></FE>
+	<FE ch="27" data="data"><D Device="T2" segment="0" ch="0" data="data + 1"/></FE>
+	<for var="ch" from="0" to="3">
+	  <FE ch="ch + 28" data="data"><D Device="HR-TDCdummy" plane="4" segment="ch + 28" data="data"/>
+	</FE></for>
+      </for>
+    </HulHRTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1701" name="hul03bc-1">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="1" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="1" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1702" name="hul03bc-2">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="2" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="3" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="3" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1703" name="hul03bc-3">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="4" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="5" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC3" plane="5" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1704" name="hul03bc-4">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="1" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="1" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1705" name="hul03bc-5">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="2" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="3" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="3" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1706" name="hul03bc-6">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="4" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="64" to="95"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="5" ch="95 - ch" data="data"/></FE>
+      </for></for>
+     <for var="ch" from="96" to="127"><for var="data" from="0" to="1">
+    	  <FE ch="ch" data="data"><D Device="BC4" plane="5" ch="159 - ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1707" name="hul03sbc-1">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="1" ch="ch" data="data"/></FE>
+	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="2" ch="ch - 16" data="data"/></FE>
+    	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="3" ch="ch - 16" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="5" ch="ch - 32" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="4" ch="ch - 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="1" ch="ch - 32" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="0" ch="ch - 32" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1708" name="hul03sbc-2">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="2" ch="ch + 16" data="data"/></FE>
+	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="3" ch="ch + 16" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="63"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch - 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="1" ch="ch" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="2" ch="ch - 16" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="3" ch="ch - 16" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1709" name="hul03sbc-3">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="5" ch="ch + 32" data="data"/></FE>
+	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="4" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="1" ch="ch + 32" data="data"/></FE>
+    	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="0" ch="ch + 32" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="2" ch="ch + 16" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="3" ch="ch + 16" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="1">
+    	<FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="5" ch="ch" data="data"/></FE>
+    	<FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="4" ch="ch" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+    <!--________________________________________________________________-->
+    <HulMHTdc node_id="1710" name="hul03sbc-4">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="2">
+    	  <FE ch="ch*2 + 0" data="data"><D Device="SDC1" plane="5" ch="ch + 16" data="data"/></FE>
+    	  <FE ch="ch*2 + 1" data="data"><D Device="SDC1" plane="4" ch="ch + 16" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="127"><for var="data" from="0" to="2">
+    	  <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+      <for var="data" from="0" to="3">
+  	<FE ch="0" data="data + 3"><D Device="HUL-RM" plane="hulbc10" ch="0" data="data"/></FE>
+      </for>
+    </HulMHTdc>
+    <!--____________________________________________________________________-->
+    <HulMHTdc node_id="1711" name="hul03sbc-5">
+      <for var="ch" from="0" to="3"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="ch + 44" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="4" to="25"><for var="data" from="0" to="2">
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="25 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="26" to="31"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="ch + 22" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="32" to="37"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="ch + 22" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="38" to="59"><for var="data" from="0" to="2">
+	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="81 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="60" to="63"><for var="data" from="0" to="2">
+	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+	<FE ch="ch" data="data"><D Device="SDC2" plane="0" ch="ch" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="64" to="69"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 20" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="70" to="91"><for var="data" from="0" to="2">
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 70" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="92" to="95"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 42" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="96" to="99"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 42" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="100" to="121"><for var="data" from="0" to="2">
+	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 78" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="122" to="127"><for var="data" from="0" to="2">
+	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+	<FE ch="ch" data="data"><D Device="SDC2" plane="1" ch="ch - 64" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+
+    <!-- <HulMHTdc node_id="1711" name="hul03sbc-5"> -->
+    <!--   <for var="ch" from="0" to="7"><for var="data" from="0" to="2"> -->
+    <!-- 	<FE ch="ch   " data="data"><D Device="SDC2" plane="1" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+8 " data="data"><D Device="SDC2" plane="0" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+16" data="data"><D Device="SDC2" plane="1" ch="ch+8" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+24" data="data"><D Device="SDC2" plane="0" ch="ch+8" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+32" data="data"><D Device="SDC2" plane="1" ch="ch+16" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+40" data="data"><D Device="SDC2" plane="0" ch="ch+16" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+48" data="data"><D Device="SDC2" plane="1" ch="ch+24" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+56" data="data"><D Device="SDC2" plane="0" ch="ch+24" data="data"/></FE> -->
+
+    <!-- 	<FE ch="ch+64" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+72" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+80" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+88" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+
+    <!-- 	<FE ch="ch+96 " data="data"><D Device="SDC2" plane="1" ch="ch+32" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+104" data="data"><D Device="SDC2" plane="0" ch="ch+32" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+112" data="data"><D Device="SDC2" plane="1" ch="ch+40" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+120" data="data"><D Device="SDC2" plane="0" ch="ch+40" data="data"/></FE> -->
+    <!--   </for></for> -->
+
+    <!--   <for var="data" from="0" to="3"> -->
+    <!-- 	<FE ch="0" data="data + 3"><D Device="HUL-RM" plane="hulbc11" ch="0" data="data"/></FE> -->
+    <!--   </for> -->
+    <!-- </HulMHTdc> -->
+
+    <!--____________________________________________________________________-->
+    <HulMHTdc node_id="1712" name="hul03sbc-6">
+      <for var="ch" from="0" to="3"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="ch + 44" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="4" to="25"><for var="data" from="0" to="2">
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="25 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="26" to="31"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="ch + 22" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="32" to="37"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="ch + 22" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="38" to="59"><for var="data" from="0" to="2">
+	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="81 - ch" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="60" to="63"><for var="data" from="0" to="2">
+	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+	<FE ch="ch" data="data"><D Device="SDC2" plane="2" ch="ch" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="64" to="69"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 20" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="70" to="91"><for var="data" from="0" to="2">
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 70" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="92" to="95"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 42" data="data"/></FE>
+      </for></for>
+
+      <for var="ch" from="96" to="99"><for var="data" from="0" to="2">
+    	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 42" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="100" to="121"><for var="data" from="0" to="2">
+	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 78" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="122" to="127"><for var="data" from="0" to="2">
+	<!-- <FE ch="ch" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+	<FE ch="ch" data="data"><D Device="SDC2" plane="3" ch="ch - 64" data="data"/></FE>
+      </for></for>
+    </HulMHTdc>
+
+    <!-- <HulMHTdc node_id="1712" name="hul03sbc-6"> -->
+    <!--   <for var="ch" from="0" to="7"><for var="data" from="0" to="2"> -->
+    <!-- 	<FE ch="ch   " data="data"><D Device="SDC2" plane="1" ch="ch+48" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+8 " data="data"><D Device="SDC2" plane="0" ch="ch+48" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+16" data="data"><D Device="SDC2" plane="1" ch="ch+56" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+24" data="data"><D Device="SDC2" plane="0" ch="ch+56" data="data"/></FE> -->
+    <!--   </for></for> -->
+
+    <!--   <for var="ch" from="0" to="5"><for var="data" from="0" to="2"> -->
+    <!--     <FE ch="ch+32" data="data"><D Device="SDC2" plane="1" ch="ch+64" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+40" data="data"><D Device="SDC2" plane="0" ch="ch+64" data="data"/></FE> -->
+    <!--   </for></for> -->
+    <!--   <for var="ch" from="0" to="1"><for var="data" from="0" to="2"> -->
+    <!-- 	<FE ch="ch+38" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+46" data="data"><D Device="HULMHTDCdummy" plane="0" ch="ch" data="data"/></FE> -->
+    <!--   </for></for> -->
+
+    <!--   <for var="ch" from="0" to="7"><for var="data" from="0" to="2"> -->
+    <!-- 	<FE ch="ch+48" data="data"><D Device="SDC2" plane="3" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+56" data="data"><D Device="SDC2" plane="2" ch="ch" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+64" data="data"><D Device="SDC2" plane="3" ch="ch+8" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+72" data="data"><D Device="SDC2" plane="2" ch="ch+8" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+80" data="data"><D Device="SDC2" plane="3" ch="ch+16" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+88" data="data"><D Device="SDC2" plane="2" ch="ch+16" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+96 " data="data"><D Device="SDC2" plane="3" ch="ch+24" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+104" data="data"><D Device="SDC2" plane="2" ch="ch+24" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+112" data="data"><D Device="SDC2" plane="3" ch="ch+32" data="data"/></FE> -->
+    <!-- 	<FE ch="ch+120" data="data"><D Device="SDC2" plane="2" ch="ch+32" data="data"/></FE> -->
+    <!-- 	</for></for> -->
+    <!-- </HulMHTdc> -->
+
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="1721" name="hul03hr-1">
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HTOF" segment="ch" ch="0" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="0" to="31"><for var="data" from="0" to="3">
+	<FE ch="ch+32" data="data"><D Device="HTOF" segment="ch" ch="1" data="data + 1"/>
+      </FE></for></for>
+    </HulHRTdc>
+    <!-- _____________________________________________________________-->
+    <HulHRTdc node_id="1722" name="hul03hr-2">
+      <for var="ch" from="0" to="1"><for var="data" from="0" to="3">
+	<FE ch="ch" data="data"><D Device="HTOF" segment="ch+32" ch="0" data="data + 1"/>
+      </FE></for></for>
+      <for var="ch" from="0" to="1"><for var="data" from="0" to="3">
+	<FE ch="ch+2" data="data"><D Device="HTOF" segment="ch+32" ch="1" data="data + 1"/>
+      </FE></for></for>
+      <for var="data" from="0" to="3">
+	<FE ch="4" data="data"><D Device="HTOF" segment="34" ch="0" data="data + 1"/></FE>
+      </for>
+      <for var="ch" from="0" to="26"><for var="data" from="0" to="3">
+	<FE ch="ch+5" data="data"><D Device="HR-TDCdummy" plane="3" segment="ch" ch="0" data="data"/>
+      </FE></for></for>
+    </HulHRTdc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea00" name="easiroc0">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * ch + 1" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * (ch -16) + 3" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea01" name="easiroc1">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * ch + 0" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * (ch -16) + 2" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea02" name="easiroc2">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * ch + 0" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * (ch -16) + 2" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea03" name="easiroc3">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * ch + 1" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * (ch -16) + 3" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea04" name="easiroc4">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * ch + 65" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * (ch -16) + 67" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea05" name="easiroc5">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * ch + 65" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * (ch -16) + 67" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea06" name="easiroc6">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * ch + 64" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="4 * (ch -16) + 66" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea08" name="easiroc8">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * ch + 64" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="0" ch="4 * (ch -16) + 66" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea07" name="easiroc7">
+      <for var="ch" from="0" to="7"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+	  <D Device="BFT" plane="0" ch="128 + 4 * ch + 2" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="8" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+	  <D Device="BFT" plane="0" ch="128 + 4 * (ch - 8) + 0" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="23"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="128 + 4 * (ch - 16) + 2" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="24" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="128 + 4 * (ch - 24) + 0" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea09" name="easiroc9">
+      <for var="ch" from="0" to="7"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+	  <D Device="BFT" plane="0" ch="128 + 4 * ch + 3" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="8" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+	  <D Device="BFT" plane="0" ch="128 + 4 * (ch - 8) + 1" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="23"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="128 + 4 * (ch - 16) + 3" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="24" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data">
+          <D Device="BFT" plane="1" ch="128 + 4 * (ch - 24) + 1" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea11" name="easiroc11">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+	<FE ch="ch" data="data"><D Device="Easirocdummy" plane="0" ch="ch" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="47 - ch" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea12" name="easiroc12">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="47 - ch" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="79 - ch" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <Easiroc node_id="0xea13" name="easiroc13">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="1">
+        <FE ch="ch" data="data"><D Device="SCH" segment="15 - ch" data="data"/>
+      </FE></for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="1">
+	<FE ch="ch" data="data"><D Device="Easirocdummy" plane="2" ch="ch" data="data"/>
+      </FE></for></for>
+    </Easiroc>
+    <!--________________________________________________________________-->
+    <HulMsT node_id="0x641" name="hul02mst-1">
+      <for var="ch" from="0" to="31">
+	<FE ch="ch" data="0"><D Device="MsT" plane="0" segment="ch" ch="0" data="0"/></FE>
+      </for>
+      <for var="ch" from="0" to="63">
+	<FE ch="ch" data="1"><D Device="MsT" plane="1" segment="ch" ch="0" data="0"/></FE>
+      </for>
+      <for var="data" from="0" to="6">
+	<FE ch="0" data="data+2"><D Device="MsT" plane="2" segment="0" ch="0" data="data"/></FE>
+      </for>
+      <for var="data" from="0" to="3">
+	<FE ch="0" data="data+9"><D Device="HUL-RM" plane="hul02mst_1" ch="0" data="data"/></FE>
+      </for>
+    </HulMsT>
+    <!--________________________________________________________________-->
+    <VmeMaster node_id="0x208" name="vme08">
+      <VmeRm address="0x7f040000">
+    	<for var="ch" from="0" to="1"><for var="data" from="0" to="3">
+    	  <FE ch="ch" data="data">
+    	  <D Device="VME-RM" Plane="vme08" ch="ch" data="data"/></FE>
+    	</for></for>
+      </VmeRm>
+      <VmeCaenV820 address="0xcd010000">
+    	<for var="ch" from="0" to="31">
+    	  <FE ch="ch" data="0">
+    	  <D Device="Scaler" plane="0" ch="ch" data="0"/></FE>
+    	</for>
+      </VmeCaenV820>
+    </VmeMaster>
+
+    <!--__________AFT___________________________________________________-->
+    <!-- AFT 1st layer VmeEasiroc-16,17,31 -->
+    <!-- .16 X1-U1,2 -->
+    <VmeEasiroc node_id="0x0844" name="aft01-16">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="1" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="0" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="0" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="1" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .17 X1-D1,2 -->
+    <VmeEasiroc node_id="0x0845" name="aft01-17">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="0" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="1" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="1" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="0" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .31 Y1-U,D -->
+    <VmeEasiroc node_id="0x0853" name="aft01-31">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="3" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="2" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="2" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="3" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 2nd layer VmeEasiroc-32,33,34 -->
+    <!-- .32 X2-U1,2 -->
+    <VmeEasiroc node_id="0x0854" name="aft01-32">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="5" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="4" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="4" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="5" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .33 X2-D1,2 -->
+    <VmeEasiroc node_id="0x0855" name="aft01-33">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="4" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="5" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="5" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="4" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .34 Y2-U,D -->
+    <VmeEasiroc node_id="0x0856" name="aft01-34">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="7" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="6" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="6" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="7" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 3rd layer VmeEasiroc-49,50,51 -->
+    <!-- .49 X3-U1,2 -->
+    <VmeEasiroc node_id="0x0865" name="aft01-49">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="9" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="8" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="8" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="9" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .50 X3-D1,2 -->
+    <VmeEasiroc node_id="0x0866" name="aft01-50">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="8" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="9" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="9" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="8" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .51 Y3-U,D -->
+    <VmeEasiroc node_id="0x0867" name="aft01-51">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="11" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="10" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="10" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="11" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 4th layer VmeEasiroc-52,53,69 -->
+    <!-- .52 X4-U1,2 -->
+    <VmeEasiroc node_id="0x0868" name="aft01-52">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="13" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="12" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="12" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="13" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .53 X4-D1,2 -->
+    <VmeEasiroc node_id="0x0869" name="aft01-53">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="12" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="13" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="13" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="12" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .69 Y4-U,D -->
+    <VmeEasiroc node_id="0x0879" name="aft01-69">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="15" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="14" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="14" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="15" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 5th layer VmeEasiroc-27,28,29 -->
+    <!-- .27 X5-U1,2 -->
+    <VmeEasiroc node_id="0x08b3" name="aft02-27">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="17" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="16" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="16" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="17" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .28 X5-D1,2 -->
+    <VmeEasiroc node_id="0x08b4" name="aft02-28">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="16" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="17" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="17" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="16" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .29 Y5-U,D -->
+    <VmeEasiroc node_id="0x08b5" name="aft02-29">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="19" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="18" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="18" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="19" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 6th layer VmeEasiroc-30,44,45 -->
+    <!-- .30 X6-U1,2 -->
+    <VmeEasiroc node_id="0x08b6" name="aft02-30">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="21" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="20" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="20" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="21" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .44 X6-D1,2 -->
+    <VmeEasiroc node_id="0x08c4" name="aft02-44">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="20" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="21" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="21" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="20" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .45 Y6-U,D -->
+    <VmeEasiroc node_id="0x08c5" name="aft02-45">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="23" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="22" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="22" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="23" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 7th layer VmeEasiroc-46,47,48 -->
+    <!-- .46 X7-U1,2 -->
+    <VmeEasiroc node_id="0x08c6" name="aft02-46">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="25" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="24" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="24" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="25" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .47 X7-D1,2 -->
+    <VmeEasiroc node_id="0x08c7" name="aft02-47">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="24" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="25" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="25" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="24" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .48 Y7-U,D -->
+    <VmeEasiroc node_id="0x08c8" name="aft02-48">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="27" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="26" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="26" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="27" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 8th layer VmeEasiroc-64,65,66 -->
+    <!-- .64 X8-U1,2 -->
+    <VmeEasiroc node_id="0x08d8" name="aft02-64">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="29" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="28" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="28" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="29" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .65 X8-D1,2 -->
+    <VmeEasiroc node_id="0x08d9" name="aft02-65">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="28" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="29" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="29" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="28" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .66 Y8-U,D -->
+    <VmeEasiroc node_id="0x08da" name="aft02-66">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="31" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="30" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="30" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="31" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- AFT 9th layer VmeEasiroc-67,68,86 -->
+    <!-- .67 X9-U1,2 -->
+    <VmeEasiroc node_id="0x08db" name="aft02-67">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="33" segment="ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="32" segment="ch - 16" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="32" segment="63 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="33" segment="79 - ch" ch="0" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .68 X9-D1,2 -->
+    <VmeEasiroc node_id="0x08dc" name="aft02-68">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="32" segment="ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="33" segment="ch - 16" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="33" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="32" segment="79 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!-- .86 Y9-U,D -->
+    <VmeEasiroc node_id="0x08ee" name="aft02-86">
+      <for var="ch" from="0" to="15"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="35" segment="15 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="16" to="31"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="34" segment="31 - ch" ch="0" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="32" to="47"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="34" segment="47 - ch" ch="1" data="data"/></FE>
+      </for></for>
+      <for var="ch" from="48" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data"><D Device="AFT" plane="35" segment="63 - ch" ch="1" data="data"/></FE>
+      </for></for>
+    </VmeEasiroc>
+    <!--         -->
+    <!-- VME EASIROC -->
+    <!--         -->
+    <!-- .16  -->
+    <VmeEasiroc node_id="0x0844" name="Veasiroc16">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="15" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .17  -->
+    <VmeEasiroc node_id="0x0845" name="Veasiroc17">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="16" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .18 (1 origin) , plane is 0 origin -->
+    <VmeEasiroc node_id="0x07e2" name="Veasiroc18">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="17" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .19 -->
+    <VmeEasiroc node_id="0x07e3" name="Veasiroc19">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="18" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .20 -->
+    <VmeEasiroc node_id="0x07e4" name="Veasiroc20">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="19" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .21 -->
+    <VmeEasiroc node_id="0x07e5" name="Veasiroc21">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="20" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .22 -->
+    <VmeEasiroc node_id="0x07e6" name="Veasiroc22">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="21" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .23 -->
+    <VmeEasiroc node_id="0x07e7" name="Veasiroc23">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="22" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .24 -->
+    <VmeEasiroc node_id="0x07e8" name="Veasiroc24">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="23" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .25 -->
+    <VmeEasiroc node_id="0x07e9" name="Veasiroc25">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="24" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .26 -->
+    <VmeEasiroc node_id="0x07ea" name="Veasiroc26">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="25" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .27 -->
+    <VmeEasiroc node_id="0x08b3" name="Veasiroc27">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="26" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .28 -->
+    <VmeEasiroc node_id="0x07ec" name="Veasiroc28">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="27" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .29 -->
+    <VmeEasiroc node_id="0x07ed" name="Veasiroc29">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="28" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .30 -->
+    <VmeEasiroc node_id="0x07ee" name="Veasiroc30">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="29" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .31 -->
+    <VmeEasiroc node_id="0x07ef" name="Veasiroc31">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="30" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .32 -->
+    <VmeEasiroc node_id="0x07f0" name="Veasiroc32">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="31" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .33 -->
+    <VmeEasiroc node_id="0x07f1" name="Veasiroc33">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="32" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .34 -->
+    <VmeEasiroc node_id="0x07f2" name="Veasiroc34">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="33" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .35 -->
+    <VmeEasiroc node_id="0x07f3" name="Veasiroc35">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="34" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .36 -->
+    <VmeEasiroc node_id="0x07f4" name="Veasiroc36">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="35" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .37 -->
+    <VmeEasiroc node_id="0x07f5" name="Veasiroc37">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="36" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .38 -->
+    <VmeEasiroc node_id="0x07f6" name="Veasiroc38">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="37" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .39 -->
+    <VmeEasiroc node_id="0x07f7" name="Veasiroc39">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="38" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .40 -->
+    <VmeEasiroc node_id="0x07f8" name="Veasiroc40">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="39" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .41 -->
+    <VmeEasiroc node_id="0x07f9" name="Veasiroc41">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="40" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .42 -->
+    <VmeEasiroc node_id="0x07fa" name="Veasiroc42">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="41" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .43 -->
+    <VmeEasiroc node_id="0x07fb" name="Veasiroc43">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="42" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .44 -->
+    <VmeEasiroc node_id="0x07fc" name="Veasiroc44">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="43" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .45 -->
+    <VmeEasiroc node_id="0x07fd" name="Veasiroc45">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="44" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .46 -->
+    <VmeEasiroc node_id="0x07fe" name="Veasiroc46">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="45" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .47 -->
+    <VmeEasiroc node_id="0x07ff" name="Veasiroc47">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="46" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .48 -->
+    <VmeEasiroc node_id="0x0800" name="Veasiroc48">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="47" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .49 -->
+    <VmeEasiroc node_id="0x0801" name="Veasiroc49">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="48" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .50 -->
+    <VmeEasiroc node_id="0x0802" name="Veasiroc50">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="49" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .51 -->
+    <VmeEasiroc node_id="0x0803" name="Veasiroc51">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="50" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .52 -->
+    <VmeEasiroc node_id="0x0804" name="Veasiroc52">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="51" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .53 -->
+    <VmeEasiroc node_id="0x0805" name="Veasiroc53">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="52" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .54 -->
+    <VmeEasiroc node_id="0x0806" name="Veasiroc54">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="53" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .55 -->
+    <VmeEasiroc node_id="0x0807" name="Veasiroc55">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="54" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .56 -->
+    <VmeEasiroc node_id="0x0808" name="Veasiroc56">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="55" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .57 -->
+    <VmeEasiroc node_id="0x0809" name="Veasiroc57">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="56" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .58 -->
+    <VmeEasiroc node_id="0x080a" name="Veasiroc58">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="57" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .59 -->
+    <VmeEasiroc node_id="0x080b" name="Veasiroc59">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="58" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .60 -->
+    <VmeEasiroc node_id="0x080c" name="Veasiroc60">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="59" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .61 -->
+    <VmeEasiroc node_id="0x080d" name="Veasiroc61">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="60" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .62 -->
+    <VmeEasiroc node_id="0x080e" name="Veasiroc62">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="61" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .63 -->
+    <VmeEasiroc node_id="0x080f" name="Veasiroc63">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="62" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .64 -->
+    <VmeEasiroc node_id="0x0810" name="Veasiroc64">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="63" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .65 -->
+    <VmeEasiroc node_id="0x0811" name="Veasiroc65">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="64" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .66 -->
+    <VmeEasiroc node_id="0x0812" name="Veasiroc66">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="65" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .67 -->
+    <VmeEasiroc node_id="0x0813" name="Veasiroc67">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="66" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .68 -->
+    <VmeEasiroc node_id="0x0814" name="Veasiroc68">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="67" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .69 -->
+    <VmeEasiroc node_id="0x0815" name="Veasiroc69">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="68" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .70 -->
+    <VmeEasiroc node_id="0x0816" name="Veasiroc70">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="69" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .71 -->
+    <VmeEasiroc node_id="0x0817" name="Veasiroc71">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="70" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .72 -->
+    <VmeEasiroc node_id="0x0818" name="Veasiroc72">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="71" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .73 -->
+    <VmeEasiroc node_id="0x0819" name="Veasiroc73">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="72" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .74 -->
+    <VmeEasiroc node_id="0x081a" name="Veasiroc74">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="73" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .75 -->
+    <VmeEasiroc node_id="0x081b" name="Veasiroc75">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="74" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .76 -->
+    <VmeEasiroc node_id="0x081c" name="Veasiroc76">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="75" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .77 -->
+    <VmeEasiroc node_id="0x081d" name="Veasiroc77">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="76" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .78 -->
+    <VmeEasiroc node_id="0x081e" name="Veasiroc78">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="77" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .79 -->
+    <VmeEasiroc node_id="0x081f" name="Veasiroc79">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="78" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+    <!-- .80 -->
+    <VmeEasiroc node_id="0x0820" name="Veasiroc80">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="79" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .81 -->
+    <VmeEasiroc node_id="0x0821" name="Veasiroc81">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="80" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .82 -->
+    <VmeEasiroc node_id="0x0822" name="Veasiroc82">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="81" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .83 -->
+    <VmeEasiroc node_id="0x0823" name="Veasiroc83">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="82" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .84 -->
+    <VmeEasiroc node_id="0x0824" name="Veasiroc84">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="83" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .85 -->
+    <VmeEasiroc node_id="0x0825" name="Veasiroc85">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="84" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .86 -->
+    <VmeEasiroc node_id="0x0826" name="Veasiroc86">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="85" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .87 -->
+    <VmeEasiroc node_id="0x0827" name="Veasiroc87">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="86" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .88 -->
+    <VmeEasiroc node_id="0x0828" name="Veasiroc88">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="87" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .89 -->
+    <VmeEasiroc node_id="0x0829" name="Veasiroc89">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="88" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .90 -->
+    <VmeEasiroc node_id="0x082a" name="Veasiroc90">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="89" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .91 -->
+    <VmeEasiroc node_id="0x082b" name="Veasiroc91">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="90" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .92 -->
+    <VmeEasiroc node_id="0x082c" name="Veasiroc92">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="91" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .93 -->
+    <VmeEasiroc node_id="0x082d" name="Veasiroc93">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="92" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .94 -->
+    <VmeEasiroc node_id="0x082e" name="Veasiroc94">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="93" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+   <!-- .95 -->
+    <VmeEasiroc node_id="0x082f" name="Veasiroc95">
+      <for var="ch" from="0" to="63"><for var="data" from="0" to="3">
+        <FE ch="ch" data="data">
+          <D Device="VMEEASIROC" plane="94" ch="ch" data="data"/>
+        </FE></for></for>
+    </VmeEasiroc>
+  </DAQNode>
+</channel_map>

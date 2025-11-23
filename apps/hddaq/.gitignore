@@ -1,0 +1,10 @@
+*.[ado]
+*~
+\#*\#
+*.swp
+*.pyc
+*.dev
+build/
+bin/
+lib/
+!.gitkeep

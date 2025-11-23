@@ -1,0 +1,12 @@
+#############################
+# Don't change the Value
+# This Register is not used
+#############################
+
+# setup of ENB_CRC
+# YAENAMI : value (CRC enable = 1)
+
+0 : 0
+1 : 0
+2 : 0
+3 : 0

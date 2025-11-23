@@ -1,0 +1,18 @@
+2025 05/21 16:08:11 [ 90000,  NORMAL ] ## BuilderThread got RUN# = 30
+2025 05/21 16:08:11 [ 70000,  NORMAL ] $$ recorder got RUN# = 30
+2025 05/21 16:08:11 [ 70000,  NORMAL ] Rec: record start ./data/run00030.dat
+2025 05/21 16:08:11 [ 90000,  NORMAL ] EB: start
+2025 05/21 16:08:13 [   260,  NORMAL ] rayraw-4 [::init_device()] Connection done : 192.168.10.104
+2025 05/21 16:08:13 [ 90000,  NORMAL ] == sender: accepted
+2025 05/21 16:08:13 [ 80000,  NORMAL ] ED: READER start
+2025 05/21 16:08:13 [ 80000,  NORMAL ] ED: ++ recDataSender : start
+2025 05/21 16:08:13 [ 80000,  NORMAL ] ED: -- monDataSender : start
+2025 05/21 16:09:49 [ 90000, WARNING ] ## ERROR bad event header : 0xa082d5fe node 0 ## 
+2025 05/21 16:09:53 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 05/21 16:09:53 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 05/21 16:09:53 [ 70000,  NORMAL ] Rec: ./data/run00030.dat closed
+2025 05/21 16:09:58 [ 80000,  NORMAL ] %% DistReader : got STOP Command
+2025 05/21 16:09:58 [ 80000,  NORMAL ] ++ recDataSender : got STOP Command
+2025 05/21 16:10:46 [ 90000,  NORMAL ] EB: node =      localhost  port = 9004  Bsize = 40000  Nque = 10000
+2025 05/21 16:10:46 [ 90000,  NORMAL ] ## bulderThread: Bsize = 1024000 Nque = 200
+2025 05/21 16:10:46 [ 90000,  NORMAL ] == SenderThread: waiting for connection from client port:8900

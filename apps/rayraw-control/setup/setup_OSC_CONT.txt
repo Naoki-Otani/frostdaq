@@ -1,0 +1,9 @@
+# setup of OSC_CONT
+
+# YAENAMI : value (OSC frequency control, 0:High, 15:Low)
+# Default: 0
+
+1 : 0
+2 : 0
+3 : 0
+4 : 0

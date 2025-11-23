@@ -1,0 +1,9 @@
+# gitignore
+
+*.[doa]
+*.so
+*~
+bin/*
+include/*
+lib/*
+Makefile

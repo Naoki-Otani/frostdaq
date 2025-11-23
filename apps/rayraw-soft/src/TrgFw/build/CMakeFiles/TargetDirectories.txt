@@ -1,0 +1,7 @@
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/TrgFw_daq.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/edit_cache.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/rebuild_cache.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/list_install_components.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/install.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/install/local.dir
+/root/apps/rayraw-soft/src/TrgFw/build/CMakeFiles/install/strip.dir

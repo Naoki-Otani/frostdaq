@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<digit_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:noNamespaceSchemaLocation="schema/digit.xsd">
+
+  <device id="0xff" name="null"/>
+
+  <!--_______RAYRAW___________________________________________________-->
+  <device id="31" name="RAYRAW" type="Fiber">
+    <for var="plane" from="0" to="1"><plane id="plane"><for var="seg" from="0" to="31">
+      <segment id="seg">
+	<data id="0" name="fadc"/>
+	<data id="1" name="crs_cnt"/>
+	<data id="2" name="leading"/>
+	<data id="3" name="trailing"/>
+	<data id="4" name="overflow"/>
+        <data id="5" name="highgain"/>
+        <data id="6" name="lowgain"/>
+      </segment></for>
+    </plane></for>
+  </device>
+
+  <!--_____CFT with RAYRAW_______________________________________-->
+  <!-- <device id="30" name="CFT_rayraw" type="Fiber"> -->
+  <!--   <plane id="0" name="UV-1"><for var="seg" from="0" to="426"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="1" name="Phi-1"><for var="seg" from="0" to="584"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="2" name="UV-2"><for var="seg" from="0" to="472"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="3" name="Phi-2"><for var="seg" from="0" to="692"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="4" name="UV-3"><for var="seg" from="0" to="510"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="5" name="Phi-3"><for var="seg" from="0" to="800"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="6" name="UV-4"><for var="seg" from="0" to="538"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!--   <plane id="7" name="Phi-4"><for var="seg" from="0" to="910"> -->
+  <!--     <segment id="seg"> -->
+  <!-- 	<data id="0" name="fadc"/> -->
+  <!-- 	<data id="1" name="leading"/> -->
+  <!-- 	<data id="2" name="trailing"/> -->
+  <!-- 	<data id="3" name="overflow"/> -->
+  <!--     </segment></for> -->
+  <!--   </plane> -->
+  <!-- </device> -->
+</digit_data>

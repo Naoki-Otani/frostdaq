@@ -1,0 +1,54 @@
+2025 09/11 04:03:08 [ 90000,  NORMAL ] ## BuilderThread got RUN# = 52
+2025 09/11 04:03:08 [ 90000,  NORMAL ] EB: start
+2025 09/11 04:03:08 [ 70000,  NORMAL ] $$ recorder got RUN# = 52
+2025 09/11 04:03:08 [ 70000,  NORMAL ] Rec: record start ./data/run00052.dat
+2025 09/11 04:03:08 [ 80000,  NORMAL ] ED: READER start
+2025 09/11 04:03:08 [ 90000,  NORMAL ] == sender: accepted
+2025 09/11 04:03:08 [ 80000,  NORMAL ] ED: ++ recDataSender : start
+2025 09/11 04:03:08 [ 80000,  NORMAL ] ED: -- monDataSender : start
+2025 09/11 04:03:09 [   267,  NORMAL ] rayraw-11 [::init_device()] Connection done : 192.168.20.111
+2025 09/11 04:03:09 [   263,  NORMAL ] rayraw-7 [::init_device()] Connection done : 192.168.20.107
+2025 09/11 04:03:09 [   261,  NORMAL ] rayraw-5 [::init_device()] Connection done : 192.168.20.105
+2025 09/11 04:03:09 [   258,  NORMAL ] rayraw-2 [::init_device()] Connection done : 192.168.20.102
+2025 09/11 04:03:09 [   257,  NORMAL ] rayraw-1 [::init_device()] Connection done : 192.168.20.101
+2025 09/11 04:03:09 [   264,  NORMAL ] rayraw-8 [::init_device()] Connection done : 192.168.20.108
+2025 09/11 04:03:09 [   265,  NORMAL ] rayraw-9 [::init_device()] Connection done : 192.168.20.109
+2025 09/11 04:03:09 [   262,  NORMAL ] rayraw-6 [::init_device()] Connection done : 192.168.20.106
+2025 09/11 04:03:09 [   266,  NORMAL ] rayraw-10 [::init_device()] Connection done : 192.168.20.110
+2025 09/11 04:03:09 [   260,  NORMAL ] rayraw-4 [::init_device()] Connection done : 192.168.20.104
+2025 09/11 04:03:09 [   259,  NORMAL ] rayraw-3 [::init_device()] Connection done : 192.168.20.103
+2025 09/11 04:04:31 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 09/11 04:04:31 [ 70000,  NORMAL ] $$ recorder : got STOP Command
+2025 09/11 04:04:31 [ 70000,  NORMAL ] Rec: ./data/run00052.dat closed
+2025 09/11 04:04:31 [ 90000,  NORMAL ] == SenderThread : got STOP Command
+2025 09/11 04:04:31 [ 90000,  NORMAL ] == SenderThread : got STOP Command
+2025 09/11 04:04:31 [ 90000,  NORMAL ] == SenderThread: waiting for connection from client port:8900
+2025 09/11 04:04:31 [ 90000, WARNING ] ## ERROR bad event header : 0 node 8 ## 
+2025 09/11 04:04:31 [ 90000, WARNING ] #E Event Number Miss match !
+node id(hex) event number
+       0x101        303
+       0x102        303
+       0x103        303
+       0x104        303
+       0x105        303
+       0x106        303
+       0x107        303
+       0x108        303
+           0          0
+       0x10a        303
+       0x10b        303
+
+2025 09/11 04:04:31 [ 90000,  NORMAL ] ## BuilderThread : got STOP Command
+2025 09/11 04:04:31 [ 90000,  NORMAL ] EB: stop
+2025 09/11 04:04:31 [ 80000,  NORMAL ] ++ recDataSender : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  4 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  9 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  0 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  3 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  7 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  8 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  1 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread 10 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  5 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  6 : got STOP Command
+2025 09/11 04:04:36 [ 90000,  NORMAL ] ** ReaderThread  2 : got STOP Command
