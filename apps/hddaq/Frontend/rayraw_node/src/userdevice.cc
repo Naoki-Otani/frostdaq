@@ -5,6 +5,14 @@
 #include <fstream>
 #include <sstream>
 
+//add 20251203 by N.Otani ========
+#include <sys/types.h>
+#include <sys/socket.h> 
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <unistd.h>
+// ===============================
+
 #include "FPGAModule.hh"
 #include "RegisterMap.hh"
 #include "RegisterMapCommon.hh"
@@ -153,6 +161,32 @@ init_device( NodeProp& nodeprop )
 	std::cerr << oss.str() << std::endl;
 	std::cout << " 1. Connection fail : " << ip << std::endl; // add for debugging
       }
+
+      //add 20251203 by N.Otani =====================
+      int optval = 1;
+
+      if (setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE,
+                   &optval, sizeof(optval)) < 0) {
+         perror("setsockopt(SO_KEEPALIVE)");
+      }
+
+      int keep_idle     = 300;
+      int keep_interval = 30;
+      int keep_count    = 10;
+
+      if (setsockopt(sock, IPPROTO_TCP, TCP_KEEPIDLE,
+                     &keep_idle, sizeof(keep_idle)) < 0) {
+        perror("setsockopt(TCP_KEEPIDLE)");
+      }
+      if (setsockopt(sock, IPPROTO_TCP, TCP_KEEPINTVL,
+                     &keep_interval, sizeof(keep_interval)) < 0) {
+        perror("setsockopt(TCP_KEEPINTVL)");
+      }
+      if (setsockopt(sock, IPPROTO_TCP, TCP_KEEPCNT,
+                     &keep_count, sizeof(keep_count)) < 0) {
+        perror("setsockopt(TCP_KEEPCNT)");
+      }
+      // ==============================================
 
       {
 	std::ostringstream oss;

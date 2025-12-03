@@ -10,4 +10,4 @@ Starting up RAYRAW #8 : rayraw-8 	264	9008	192.168.20.108	['U16', 'U17', 'U18', 
 Starting up RAYRAW #9 : rayraw-9 	265	9009	192.168.20.109	['U16', 'U17', 'U18', 'U19']
 Starting up RAYRAW #10: rayraw-10	266	9010	192.168.20.110	['U16', 'U17', 'U18', 'U19']
 Starting up RAYRAW #11: rayraw-11	267	9011	192.168.20.111	['U16', 'U17', 'U18', 'U19']
-Starting up RAYRAW #12: rayraw-12	268	9012	192.168.20.112	['U16', 'U17', 'U18', 'U19']
+Starting up RAYRAW #12: rayraw-12	268	9012	192.168.20.112	['U17', 'U18', 'U19']

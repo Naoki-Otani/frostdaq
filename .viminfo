@@ -17,10 +17,10 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1763890695,,"wq"
 :q!
-|2,0,1763890369,,"q!"
+|2,0,1764740916,,"q!"
+:wq
+|2,0,1764740872,,"wq"
 :q
 |2,0,1761292202,,"q"
 :qall
@@ -558,230 +558,300 @@ $
 |3,0,36,0,1,0,1761099087,"range(MAX_HV, 256),"
 
 # File marks:
-'0  34  7  ~/.gitignore
-|4,48,34,7,1763890695,"~/.gitignore"
-'1  25  4  ~/.gitignore
-|4,49,25,4,1763890424,"~/.gitignore"
-'2  25  4  ~/.gitignore
-|4,50,25,4,1763890424,"~/.gitignore"
-'3  24  13  ~/.gitignore
-|4,51,24,13,1763890369,"~/.gitignore"
-'4  24  13  ~/.gitignore
-|4,52,24,13,1763890369,"~/.gitignore"
-'5  24  13  ~/.gitignore
-|4,53,24,13,1763890369,"~/.gitignore"
-'6  24  13  ~/.gitignore
-|4,54,24,13,1763890369,"~/.gitignore"
-'7  24  13  ~/.gitignore
-|4,55,24,13,1763889686,"~/.gitignore"
-'8  24  13  ~/.gitignore
-|4,56,24,13,1763889686,"~/.gitignore"
-'9  24  13  ~/.gitignore
-|4,57,24,13,1763889686,"~/.gitignore"
+'0  5  32  ~/.gitconfig
+|4,48,5,32,1764740916,"~/.gitconfig"
+'1  5  32  ~/.gitconfig
+|4,49,5,32,1764740872,"~/.gitconfig"
+'2  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,50,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'3  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,51,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+'4  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,52,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'5  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,53,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'6  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,54,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+'7  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,55,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'8  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,56,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'9  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,57,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
 
 # Jumplist (newest first):
--'  34  7  ~/.gitignore
-|4,39,34,7,1763890695,"~/.gitignore"
--'  25  4  ~/.gitignore
-|4,39,25,4,1763890647,"~/.gitignore"
--'  25  4  ~/.gitignore
-|4,39,25,4,1763890424,"~/.gitignore"
--'  24  13  ~/.gitignore
-|4,39,24,13,1763890405,"~/.gitignore"
--'  24  13  ~/.gitignore
-|4,39,24,13,1763890405,"~/.gitignore"
--'  24  13  ~/.gitignore
-|4,39,24,13,1763890369,"~/.gitignore"
--'  24  13  ~/.gitignore
-|4,39,24,13,1763889686,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1763889648,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1763889648,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1763889648,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1763889648,"~/.gitignore"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
+|4,39,1,0,1764740784,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  1  0  ~/.gitconfig
-|4,39,1,0,1763886804,"~/.gitconfig"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  197  35  ~/scripts/daq.py
-|4,39,197,35,1763878801,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763878675,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
--'  22  39  ~/scripts/daq.py
-|4,39,22,39,1763801608,"~/scripts/daq.py"
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitconfig
+	*	1764740914	0
+	"	5	32
+	^	5	33
+	.	5	32
+	+	4	18
+	+	5	32
+
+> ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+	*	1764725126	0
+	"	174	28
+	^	173	30
+	.	173	29
+	+	12	24
+	+	13	18
+	+	9	22
+	+	10	17
+	+	165	52
+	+	189	34
+	+	166	5
+	+	168	5
+	+	170	8
+	+	171	5
+	+	173	5
+	+	174	5
+	+	175	5
+	+	177	5
+	+	178	7
+	+	179	7
+	+	180	5
+	+	181	5
+	+	182	7
+	+	183	7
+	+	184	5
+	+	185	5
+	+	186	7
+	+	187	7
+	+	188	5
+	+	189	54
+	+	175	29
+	+	174	29
+	+	173	30
+	+	165	52
+	+	9	47
+	+	10	24
+	+	9	22
+	+	8	33
+	+	14	34
+	+	173	29
+
+> ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
+	*	1764725115	0
+	"	1	0
+
+> ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.
+	*	1764723754	0
+	"	1	0
+
+> ~/apps/rsyncdat/src/rsyncdat.sh
+	*	1764644117	0
+	"	30	91
+	^	30	92
+	.	30	91
+	+	30	92
+	+	30	91
+
+> ~/.ssh/config
+	*	1764642641	0
+	"	1	0
 
 > ~/.gitignore
 	*	1763890694	0
@@ -793,10 +863,6 @@ $
 	+	23	7
 	+	25	5
 	+	34	7
-
-> ~/.gitconfig
-	*	1763886803	0
-	"	1	0
 
 > ~/scripts/daq.py
 	*	1763878799	0
@@ -1371,10 +1437,6 @@ $
 	*	1754024861	0
 	"	14	0
 
-> ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-	*	1754019149	0
-	"	121	1
-
 > ~/apps/hddaq/Frontend/rayraw_node/script/fe_start.sh
 	*	1754015822	0
 	"	24	15
@@ -1851,20 +1913,4 @@ $
 
 > ~/apps/param/USER/UserParam_rayraw_20250116.txt
 	*	1748576851	0
-	"	1	0
-
-> ~/apps/param/USER/UserParam_rayraw_20240720.txt
-	*	1748576826	0
-	"	1	0
-
-> ~/apps/param/USER/UserParam_rayraw_20241231.txt
-	*	1748576794	0
-	"	1	0
-
-> ~/apps/param/USER/UserParam_rayraw.txt
-	*	1748576777	0
-	"	1	0
-
-> ~/apps/param/conf/analyzer_rayraw_20250108.conf
-	*	1748576089	0
 	"	1	0

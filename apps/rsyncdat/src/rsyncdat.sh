@@ -22,7 +22,7 @@ INTERVAL="${2:-30}"                         # 同期間隔（秒）
 # リモート
 REMOTE_USER="notani"
 REMOTE_HOST="login.cc.kek.jp"
-REMOTE_DIR="/group/nu/ninja/work/otani/FROST_beamdata/test/datfile"
+REMOTE_DIR="/group/nu/ninja/work/otani/FROST_beamdata/e71c/datfile"
 
 # SSH/鍵（2段ジャンプ: sshcc1 → login）
 SSH_KEY="/root/.ssh/rsync_ed25519"

@@ -1,103 +1,3 @@
-ls
-mkdir test
-ls
-cd test
-ls
-../macro/transcaen.sh test
-cd ..
-ls
-cd macro
-ls
-emacs transcaen.sh
-cd ../test/
-ls
-../macro/transcaen.sh test
-cd ../macro/
-ls
-emacs transcaen.sh
-cd ..
-ls
-cd test
-ls
-../macro/transcaen.sh test
-ls
-cd ..
-ls
-cd /mnt/d/caendata/
-ls
-rm caentestfile 
-ls
-cd ..
-ls
-cd d
-ls
-cd FROSTdata/
-ls
-cd cosmictest/
-ls
-cd rayraw/
-ls
-mkdir 20251009
-ls
-pwd
-cd /mnt/d/
-ls
-cd FROSTdata/
-ls
-cd cosmictest/
-ls
-cd caen
-ls
-cd macro
-ls
-pwd
-ls
-cd /mnt/d/caendata/
-ls
-cd caentestfile
-ls
-ls -lh
-ls
-cd ..
-ls
-cd FROSTdata/
-ls
-cd cosmictest/
-ls
-cd caen
-ls
-cd macro
-ls
-emacs transcaen.sh
-ls
-cd ..
-ls
-cd test
-ls
-../macro/transcaen.sh test
-ls
-emacs ../macro/transcaen.sh
-../macro/transcaen.sh test
-ls
-root caentestwave.root 
-ls
-emacs ../macro/transcaen.sh
-../macro/transcaen.sh test
-ls
-ls -lh
-rm *
-ls
-../macro/transcaen.sh test
-ls
-../macro/calib.sh
-../macro/calib.shtest
-../macro/calib.sh test
-emacs ../macro/calib.sh
-../macro/calib.sh test
-emacs ../macro/calib.sh
-../macro/calib.sh test
-ls
-emacs ../macro/calib.sh
 emacs ../macro/calib3.C
 ../macro/calib.sh test
 emacs ../macro/calib3.C
@@ -1997,4 +1897,104 @@ cat HV_LOG.txt
 ./daq.py 
 cat HV_LOG.txt 
 ./daq.py 
+ls
+ssh login.cc.kek.jp
+cd /mnt/data
+ls
+ls daqtest/
+ls
+mkdir e71c
+ls
+ls e71c/
+cd ..
+ls
+cd /root/
+ls
+cd apps/rsyncdat/
+ls
+cd src
+ls
+emacs rsyncdat.sh 
+cd /root/scripts
+ls
+cat ASICSTATE_LOG.txt 
+cd /root/apps/rsyncdat/
+ls
+cd /root/apps/rsyncdat/src
+ls
+
+cd /root/scripts/
+ls
+cat ASICSTATE_LOG.txt 
+ls
+cat HV_LOG.txt 
+ls
+cat ASICSTATE_LOG.txt 
+cat HV_LOG.txt 
+cat ASICSTATE_LOG.txt 
+ssh login.cc.kek.jp
+ssh notani@login.cc.kek.jp
+ssh login.cc.kek.jp
+ssh -vvv sshcc1.kek.jp
+vim ~/.ssh/config
+ls
+cd ..
+ls
+cd apps/
+ls
+cd hddaq/
+ls
+cd Frontend/
+ls
+cd rayraw_node/
+ls
+cd s
+cd src
+ls
+vim userdevice.
+ls
+vim userdevice.cc 
+ls
+cd ..
+ls
+make
+ls
+cd Frontend/
+ls
+cd rayraw_node/
+ls
+cd bin
+ls
+ls -lh
+cd ..
+ls
+make
+ls
+cd bin
+ls
+ls -lh
+cd ..
+ls
+cd src
+ls
+vim userdevice.cc 
+cd ..
+ls
+make
+vim userdevice.cc 
+ls
+cd src
+ls
+vim userdevice.cc 
+cd ..
+ls
+make
+vim userdevice.cc 
+ls
+cd src
+ls
+vim userdevice.cc 
+cd ..
+ls
+make
 ls
