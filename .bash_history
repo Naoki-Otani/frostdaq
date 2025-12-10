@@ -1,62 +1,3 @@
-emacs ../macro/calib3.C
-../macro/calib.sh test
-emacs ../macro/calib3.C
-../macro/calib.sh test
-emacs ../macro/calib.sh
-../macro/calib.sh test
-emacs ../macro/calib3.C
-../macro/calib.sh test
-emacs ../macro/calib3.C
-../macro/calib.sh test
-ls
-cd ..
-ls
-mkdir 20251009
-ls
-cd 20251009/
-ls
-../macro/transcaen.sh calib20251009-1
-ls
-../macro/calib.sh calib20251009-1
-ls
-root caencalib20251009-1wave.root 
-../macro/transcaen.sh calib20251009-1
-../macro/calib.sh calib20251009-1
-ls
-emacs caencalib20251009-1wave10.txt 
-emacs caencalib20251009-1wave9.txt 
-emacs caencalib20251009-1wave10.txt 
-../macro/calib.sh calib20251009-1
-../macro/transcaen.sh calib20251009-1
-../macro/calib.sh calib20251009-1
-../macro/transcaen.sh calib20251009-1
-../macro/calib.sh calib20251009-1
-ls
-../macro/transcaen.sh calib20251009-1
-../macro/calib.sh calib20251009-1
-ls
-cd scripts
-ls
-./daq.py --h
-./daq.py --data_path /mnt/d/FROSTdata/cosmictest/rayraw/20251009
-ls
-ping 192.168.20.110
-ls
-cd scripts
-]ls
-ls
-cd /mnt/d
-ls
-cd ..
-ls
-cd ..
-ls
-clear
-ls
-cd scripts
-ls
-cd root/scripts/
-ls
 sudo mount -t drvfs D: /mnt/caen
 sudo mount -t drvfs D: /mnt/d
 cd /mnt/d
@@ -1998,3 +1939,62 @@ cd ..
 ls
 make
 ls
+cd daq/data
+ls
+ls -lh
+ls -l
+cd ..
+ls
+cd ..
+ls
+cd scripts/
+ls
+cd ..
+ls
+cd apps/
+ls
+cd rsyncdat/
+ls
+cd logs/
+ls
+cat 2025-12-02.log 
+ls
+sudo ss -tnpo 'dport = :5001'
+sudo ss -tnpo 'dport = :9001'
+cd ..
+ls
+cd ..
+ls
+cd daq/
+ls
+cat datanode.txt
+sudo ss -tnpo 'dport = :9002'
+sudo ss -tnpo | grep 192.168.20.102
+sudo ss -tnpo 'dport = :24'
+sudo sysctl -w net.ipv4.tcp_keepalive_time=60
+sudo sysctl -w net.ipv4.tcp_keepalive_intvl=10
+sudo sysctl -w net.ipv4.tcp_keepalive_probes=3
+sudo ss -tnpo 'dport = :24'
+ls
+cd data
+ls
+ls -l
+sudo ss -tnpo 'dport = :24'
+ls
+sudo sysctl -w net.ipv4.tcp_keepalive_time=300
+sudo sysctl -w net.ipv4.tcp_keepalive_intvl=30
+sudo sysctl -w net.ipv4.tcp_keepalive_probes=10
+sudo ss -tnpo 'dport = :24'
+ls
+cd ..
+ls
+cd ..
+ls
+ls -la
+vim .gitconfig 
+git commit --amend --author="Naoki-Otani <naoki102811106@gmail.com>" --reset-author
+git commit --amend --author="Naoki-Otani <naoki102811106@gmail.com>"
+git push --force-with-lease
+git add .
+git commit -m "Enable TCP keepalive for RAYRAW data connection to avoid idle disconnect"
+git push -u origin main

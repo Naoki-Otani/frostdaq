@@ -17,10 +17,10 @@
 $
 
 # Command Line History (newest to oldest):
+:wq
+|2,0,1765181499,,"wq"
 :q!
 |2,0,1764740916,,"q!"
-:wq
-|2,0,1764740872,,"wq"
 :q
 |2,0,1761292202,,"q"
 :qall
@@ -362,7 +362,7 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
+"0	LINE	0
 	# Welcome to the chrony configuration file. See chrony.conf(5) for more
 	# information about usable directives.
 	
@@ -413,68 +413,83 @@ $
 	# Stop bad estimates upsetting machine clock.
 	maxupdateskew 100.0
 	
-|3,1,0,1,50,0,1761921136,"# Welcome to the chrony configuration file. See chrony.conf(5) for more","# information about usable directives.","","# Include configuration files found in /etc/chrony/conf.d.","confdir /etc/chrony/conf.d","","# This will use (up to):","# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled","# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well",>65
+|3,0,0,1,50,0,1761921136,"# Welcome to the chrony configuration file. See chrony.conf(5) for more","# information about usable directives.","","# Include configuration files found in /etc/chrony/conf.d.","confdir /etc/chrony/conf.d","","# This will use (up to):","# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled","# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well",>65
 |<"# - 1 source from [01].ubuntu.pool.ntp.org each (ipv4 only atm)","# This means by default, up to 6 dual-stack and up to 2 additional IPv4-only","# sources will be used.","# At the same time it retains some protection against one of the entries being","# down (compare to just using one of the lines). See (LP: #1754358) for the","# discussion.","#","# About using servers from the NTP Pool Project in general see (LP: #104525).","# Approved by Ubuntu Technical Board on 2011-02-08.",>63
 |<"# See http://www.pool.ntp.org/join.html for more information.","pool ntp.ubuntu.com        iburst maxsources 4","pool 0.ubuntu.pool.ntp.org iburst maxsources 1","pool 1.ubuntu.pool.ntp.org iburst maxsources 1","pool 2.ubuntu.pool.ntp.org iburst maxsources 2","","# Use time sources from DHCP.","sourcedir /run/chrony-dhcp","","# Use NTP sources found in /etc/chrony/sources.d.","sourcedir /etc/chrony/sources.d","",>79
 |<"# This directive specify the location of the file containing ID/key pairs for","# NTP authentication.","keyfile /etc/chrony/chrony.keys","","# This directive specify the file into which chronyd will store the rate","# information.","driftfile /var/lib/chrony/chrony.drift","","# Save NTS keys and cookies.","ntsdumpdir /var/lib/chrony","","# Uncomment the following line to turn logging on.","#log tracking measurements statistics","","# Log files location.","logdir /var/log/chrony","",>47
 |<"# Stop bad estimates upsetting machine clock.","maxupdateskew 100.0",""
-"1	LINE	0
-	# Welcome to the chrony configuration file. See chrony.conf(5) for more
-	# information about usable directives.
-	
-	# Include configuration files found in /etc/chrony/conf.d.
-	confdir /etc/chrony/conf.d
-	
-	# This will use (up to):
-	# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled
-	# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well
-	# - 1 source from [01].ubuntu.pool.ntp.org each (ipv4 only atm)
-	# This means by default, up to 6 dual-stack and up to 2 additional IPv4-only
-	# sources will be used.
-	# At the same time it retains some protection against one of the entries being
-	# down (compare to just using one of the lines). See (LP: #1754358) for the
-	# discussion.
-	#
-	# About using servers from the NTP Pool Project in general see (LP: #104525).
-	# Approved by Ubuntu Technical Board on 2011-02-08.
-	# See http://www.pool.ntp.org/join.html for more information.
-	pool ntp.ubuntu.com        iburst maxsources 4
-	pool 0.ubuntu.pool.ntp.org iburst maxsources 1
-	pool 1.ubuntu.pool.ntp.org iburst maxsources 1
-	pool 2.ubuntu.pool.ntp.org iburst maxsources 2
-	
-	# Use time sources from DHCP.
-	sourcedir /run/chrony-dhcp
-	
-	# Use NTP sources found in /etc/chrony/sources.d.
-	sourcedir /etc/chrony/sources.d
-	
-	# This directive specify the location of the file containing ID/key pairs for
-	# NTP authentication.
-	keyfile /etc/chrony/chrony.keys
-	
-	# This directive specify the file into which chronyd will store the rate
-	# information.
-	driftfile /var/lib/chrony/chrony.drift
-	
-	# Save NTS keys and cookies.
-	ntsdumpdir /var/lib/chrony
-	
-	# Uncomment the following line to turn logging on.
-	#log tracking measurements statistics
-	
-	# Log files location.
-	logdir /var/log/chrony
-	
-	# Stop bad estimates upsetting machine clock.
-	maxupdateskew 100.0
-	
-|3,0,1,1,50,0,1761920219,"# Welcome to the chrony configuration file. See chrony.conf(5) for more","# information about usable directives.","","# Include configuration files found in /etc/chrony/conf.d.","confdir /etc/chrony/conf.d","","# This will use (up to):","# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled","# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well",>65
-|<"# - 1 source from [01].ubuntu.pool.ntp.org each (ipv4 only atm)","# This means by default, up to 6 dual-stack and up to 2 additional IPv4-only","# sources will be used.","# At the same time it retains some protection against one of the entries being","# down (compare to just using one of the lines). See (LP: #1754358) for the","# discussion.","#","# About using servers from the NTP Pool Project in general see (LP: #104525).","# Approved by Ubuntu Technical Board on 2011-02-08.",>63
-|<"# See http://www.pool.ntp.org/join.html for more information.","pool ntp.ubuntu.com        iburst maxsources 4","pool 0.ubuntu.pool.ntp.org iburst maxsources 1","pool 1.ubuntu.pool.ntp.org iburst maxsources 1","pool 2.ubuntu.pool.ntp.org iburst maxsources 2","","# Use time sources from DHCP.","sourcedir /run/chrony-dhcp","","# Use NTP sources found in /etc/chrony/sources.d.","sourcedir /etc/chrony/sources.d","",>79
-|<"# This directive specify the location of the file containing ID/key pairs for","# NTP authentication.","keyfile /etc/chrony/chrony.keys","","# This directive specify the file into which chronyd will store the rate","# information.","driftfile /var/lib/chrony/chrony.drift","","# Save NTS keys and cookies.","ntsdumpdir /var/lib/chrony","","# Uncomment the following line to turn logging on.","#log tracking measurements statistics","","# Log files location.","logdir /var/log/chrony","",>47
-|<"# Stop bad estimates upsetting machine clock.","maxupdateskew 100.0",""
+""1	LINE	0
+	SSH_OPTS="-o BatchMode=yes -o IdentitiesOnly=yes -o PreferredAuthentications=publickey \
+|3,1,1,1,1,0,1765181477,"SSH_OPTS=\"-o BatchMode=yes -o IdentitiesOnly=yes -o PreferredAuthentications=publickey \\"
 "2	LINE	0
+	          -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/root/.ssh/known_hosts \
+|3,0,2,1,1,0,1765181475,"          -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/root/.ssh/known_hosts \\"
+"3	LINE	0
+	          -o ConnectTimeout=10 \
+|3,0,3,1,1,0,1765181474,"          -o ConnectTimeout=10 \\"
+"4	LINE	0
+		  -o ServerAliveInterval=60 -o ServerAliveCountMax=5 \
+|3,0,4,1,1,0,1765181472,"	  -o ServerAliveInterval=60 -o ServerAliveCountMax=5 \\"
+"5	LINE	0
+		  -J sshcc1.kek.jp -i ${SSH_KEY}"
+|3,0,5,1,1,0,1765181470,"	  -J sshcc1.kek.jp -i ${SSH_KEY}\""
+"6	LINE	0
+	# Welcome to the chrony configuration file. See chrony.conf(5) for more
+	# information about usable directives.
+	
+	# Include configuration files found in /etc/chrony/conf.d.
+	confdir /etc/chrony/conf.d
+	
+	# This will use (up to):
+	# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled
+	# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well
+	# - 1 source from [01].ubuntu.pool.ntp.org each (ipv4 only atm)
+	# This means by default, up to 6 dual-stack and up to 2 additional IPv4-only
+	# sources will be used.
+	# At the same time it retains some protection against one of the entries being
+	# down (compare to just using one of the lines). See (LP: #1754358) for the
+	# discussion.
+	#
+	# About using servers from the NTP Pool Project in general see (LP: #104525).
+	# Approved by Ubuntu Technical Board on 2011-02-08.
+	# See http://www.pool.ntp.org/join.html for more information.
+	pool ntp.ubuntu.com        iburst maxsources 4
+	pool 0.ubuntu.pool.ntp.org iburst maxsources 1
+	pool 1.ubuntu.pool.ntp.org iburst maxsources 1
+	pool 2.ubuntu.pool.ntp.org iburst maxsources 2
+	
+	# Use time sources from DHCP.
+	sourcedir /run/chrony-dhcp
+	
+	# Use NTP sources found in /etc/chrony/sources.d.
+	sourcedir /etc/chrony/sources.d
+	
+	# This directive specify the location of the file containing ID/key pairs for
+	# NTP authentication.
+	keyfile /etc/chrony/chrony.keys
+	
+	# This directive specify the file into which chronyd will store the rate
+	# information.
+	driftfile /var/lib/chrony/chrony.drift
+	
+	# Save NTS keys and cookies.
+	ntsdumpdir /var/lib/chrony
+	
+	# Uncomment the following line to turn logging on.
+	#log tracking measurements statistics
+	
+	# Log files location.
+	logdir /var/log/chrony
+	
+	# Stop bad estimates upsetting machine clock.
+	maxupdateskew 100.0
+	
+|3,0,6,1,50,0,1761920219,"# Welcome to the chrony configuration file. See chrony.conf(5) for more","# information about usable directives.","","# Include configuration files found in /etc/chrony/conf.d.","confdir /etc/chrony/conf.d","","# This will use (up to):","# - 4 sources from ntp.ubuntu.com which some are ipv6 enabled","# - 2 sources from 2.ubuntu.pool.ntp.org which is ipv6 enabled as well",>65
+|<"# - 1 source from [01].ubuntu.pool.ntp.org each (ipv4 only atm)","# This means by default, up to 6 dual-stack and up to 2 additional IPv4-only","# sources will be used.","# At the same time it retains some protection against one of the entries being","# down (compare to just using one of the lines). See (LP: #1754358) for the","# discussion.","#","# About using servers from the NTP Pool Project in general see (LP: #104525).","# Approved by Ubuntu Technical Board on 2011-02-08.",>63
+|<"# See http://www.pool.ntp.org/join.html for more information.","pool ntp.ubuntu.com        iburst maxsources 4","pool 0.ubuntu.pool.ntp.org iburst maxsources 1","pool 1.ubuntu.pool.ntp.org iburst maxsources 1","pool 2.ubuntu.pool.ntp.org iburst maxsources 2","","# Use time sources from DHCP.","sourcedir /run/chrony-dhcp","","# Use NTP sources found in /etc/chrony/sources.d.","sourcedir /etc/chrony/sources.d","",>79
+|<"# This directive specify the location of the file containing ID/key pairs for","# NTP authentication.","keyfile /etc/chrony/chrony.keys","","# This directive specify the file into which chronyd will store the rate","# information.","driftfile /var/lib/chrony/chrony.drift","","# Save NTS keys and cookies.","ntsdumpdir /var/lib/chrony","","# Uncomment the following line to turn logging on.","#log tracking measurements statistics","","# Log files location.","logdir /var/log/chrony","",>47
+|<"# Stop bad estimates upsetting machine clock.","maxupdateskew 100.0",""
+"7	LINE	0
 	# C:\Users\kuhep_guest\SSDmount\wsl-mount-debug.ps1
 	# 管理者で実行必須
 	# ============================================
@@ -525,69 +540,206 @@ $
 	
 	# 現在状態を記録
 	Get-Disk -Number $DiskNumber | Select Number, IsOffline, OperationalStatus, PartitionStyle | Format-Table | Out-String | Tee-Object -FilePath $Log -Append
-|3,0,2,1,50,0,1761899511,"# C:\\Users\\kuhep_guest\\SSDmount\\wsl-mount-debug.ps1","# 管理者で実行必須","# ============================================","$ErrorActionPreference = \"Stop\"","$Log = \"C:\\Users\\kuhep_guest\\SSDmount\\wsl-mount.log\"","$DiskNumber = 1          # ← 必要なら変更（PHYSICALDRIVE番号）","$MaxWaitUsb = 60         # デバイス認識待ち最大秒数","$SleepBetween = 3","",>99
+|3,0,7,1,50,0,1761899511,"# C:\\Users\\kuhep_guest\\SSDmount\\wsl-mount-debug.ps1","# 管理者で実行必須","# ============================================","$ErrorActionPreference = \"Stop\"","$Log = \"C:\\Users\\kuhep_guest\\SSDmount\\wsl-mount.log\"","$DiskNumber = 1          # ← 必要なら変更（PHYSICALDRIVE番号）","$MaxWaitUsb = 60         # デバイス認識待ち最大秒数","$SleepBetween = 3","",>99
 |<"\"=== $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') : START ===\" | Tee-Object -FilePath $Log -Append","","# 管理者確認","$principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())","if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {","  \"ERROR: 管理者ではありません。\" | Tee-Object -FilePath $Log -Append","  throw \"管理者で実行してください。\"","}","","# WSL 状態",>60
 |<"\"--- WSL status ---\" | Tee-Object -FilePath $Log -Append","try { wsl --status 2>&1 | Tee-Object -FilePath $Log -Append } catch { \"$_\" | Tee-Object -FilePath $Log -Append }","","# ディスク認識待ち（外付けだと起動直後にまだ来ないことがある）","$found = $false","for ($i=0; $i -le $MaxWaitUsb/$SleepBetween; $i++) {","  $d = Get-Disk -ErrorAction SilentlyContinue | Where-Object Number -eq $DiskNumber","  if ($d) { $found = $true; break }",>38
 |<"  Start-Sleep -Seconds $SleepBetween","}","if (-not $found) {","  \"ERROR: PHYSICALDRIVE$DiskNumber が見つかりません（起動直後の遅延 or 番号変更の疑い）。\" | Tee-Object -FilePath $Log -Append","  Get-Disk | Select Number, FriendlyName, SerialNumber, BusType, Size | Format-Table | Out-String | Tee-Object -FilePath $Log -Append","  throw \"ディスク番号を確認してください。\"","}",>198
 |<"\"対象ディスク: Number=$($d.Number) FriendlyName='$($d.FriendlyName)' Serial='$($d.SerialNumber)' Bus=$($d.BusType) Size=$([math]::Round($d.Size/1GB))GB\" | Tee-Object -FilePath $Log -Append","","# 1) 念のため WSL 停止","\"wsl --shutdown 実行\" | Tee-Object -FilePath $Log -Append","try { wsl --shutdown 2>&1 | Tee-Object -FilePath $Log -Append } catch { \"$_\" | Tee-Object -FilePath $Log -Append }","",>93
 |<"# 2) Windows 側ディスクを Offline に（WSLの物理ディスクマウント要件）","\"Set-Disk -Number $DiskNumber -IsOffline \\$true 実行\" | Tee-Object -FilePath $Log -Append","try {","  Set-Disk -Number $DiskNumber -IsOffline $true -ErrorAction Stop","} catch {","  \"Set-Disk 失敗（既にオフラインかも）: $_\" | Tee-Object -FilePath $Log -Append","}","","# 現在状態を記録",>156
 |<"Get-Disk -Number $DiskNumber | Select Number, IsOffline, OperationalStatus, PartitionStyle | Format-Table | Out-String | Tee-Object -FilePath $Log -Append"
-"3	LINE	0
-	print(hv_choices)
-|3,0,3,1,1,0,1761099260,"print(hv_choices)"
-"4	LINE	0
-	    #if self.daq_start_flag and trigger_rate<1e-5 and tdiff>60:
-|3,0,4,1,1,0,1760279305,"    #if self.daq_start_flag and trigger_rate<1e-5 and tdiff>60:"
-"5	LINE	0
-	    current_evnum = int(status.dist_evnum)
-|3,0,5,1,1,0,1760278896,"    current_evnum = int(status.dist_evnum)"
-"6	LINE	0
-	    logger.info(f"Trigger rate: {trigger_rate:3.2f} Hz")
-|3,0,6,1,1,0,1760255030,"    logger.info(f\"Trigger rate: {trigger_rate:3.2f} Hz\")"
-"7	LINE	0
-	        #'paplay /sound/warning-sound-6686.mp3'
-|3,0,7,1,1,0,1760238071,"        #'paplay /sound/warning-sound-6686.mp3'"
 "8	LINE	0
-	    self.nodenum.config(text=f'{n_nodes:3} nodes/{status.total_size:5} words')
-|3,0,8,1,1,0,1760237677,"    self.nodenum.config(text=f'{n_nodes:3} nodes/{status.total_size:5} words')"
+	print(hv_choices)
+|3,0,8,1,1,0,1761099260,"print(hv_choices)"
 "9	LINE	0
-	                org_link = DATA_DIR
-|3,0,9,1,1,0,1757308789,"                org_link = DATA_DIR"
+	    #if self.daq_start_flag and trigger_rate<1e-5 and tdiff>60:
+|3,0,9,1,1,0,1760279305,"    #if self.daq_start_flag and trigger_rate<1e-5 and tdiff>60:"
 "-	CHAR	0
 	range(MAX_HV, 256),
 |3,0,36,0,1,0,1761099087,"range(MAX_HV, 256),"
 
 # File marks:
-'0  5  32  ~/.gitconfig
-|4,48,5,32,1764740916,"~/.gitconfig"
-'1  5  32  ~/.gitconfig
-|4,49,5,32,1764740872,"~/.gitconfig"
-'2  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,50,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
-'3  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,51,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
-'4  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,52,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
-'5  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,53,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
-'6  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,54,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
-'7  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,55,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
-'8  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,56,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
-'9  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,57,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+'0  33  0  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,48,33,0,1765181499,"~/apps/rsyncdat/src/rsyncdat.sh"
+'1  50  103  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,49,50,103,1765181049,"~/apps/rsyncdat/src/rsyncdat.sh"
+'2  50  103  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,50,50,103,1765181049,"~/apps/rsyncdat/src/rsyncdat.sh"
+'3  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,51,51,92,1765180115,"~/apps/rsyncdat/src/rsyncdat.sh"
+'4  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,52,51,92,1765180115,"~/apps/rsyncdat/src/rsyncdat.sh"
+'5  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,53,51,92,1765180115,"~/apps/rsyncdat/src/rsyncdat.sh"
+'6  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,54,51,92,1765180115,"~/apps/rsyncdat/src/rsyncdat.sh"
+'7  145  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,55,145,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
+'8  143  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,56,143,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
+'9  145  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,57,145,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
 
 # Jumplist (newest first):
+-'  33  0  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,33,0,1765181499,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  50  103  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,50,103,1765181385,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  50  103  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,50,103,1765181049,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,51,92,1765180895,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,51,92,1765180895,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  51  92  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,51,92,1765180115,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  145  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,145,38,1765179535,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  145  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,145,38,1765179535,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  145  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,145,38,1765179535,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  143  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,143,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  143  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,143,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  143  38  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,143,38,1764900717,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  34  91  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,34,91,1764900387,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  30  91  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,30,91,1764900387,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  30  91  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,30,91,1764900387,"~/apps/rsyncdat/src/rsyncdat.sh"
+-'  30  91  ~/apps/rsyncdat/src/rsyncdat.sh
+|4,39,30,91,1764900387,"~/apps/rsyncdat/src/rsyncdat.sh"
 -'  5  32  ~/.gitconfig
 |4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740916,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
+-'  5  32  ~/.gitconfig
+|4,39,5,32,1764740872,"~/.gitconfig"
 -'  5  32  ~/.gitconfig
 |4,39,5,32,1764740872,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
 |4,39,1,0,1764740784,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
 |4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1764740784,"~/.gitconfig"
 -'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
 |4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
 -'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
@@ -596,192 +748,61 @@ $
 |4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
 -'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
 |4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725122,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764725117,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  173  29  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,173,29,1764725091,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764725001,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  1  0  ~/apps/hddaq/Frontend/rayraw_node/userdevice.cc
-|4,39,1,0,1764724996,"~/apps/hddaq/Frontend/rayraw_node/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  174  6  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,174,6,1764724479,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724431,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
--'  190  0  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
-|4,39,190,0,1764724280,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
+-'  174  28  ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc
+|4,39,174,28,1764725127,"~/apps/hddaq/Frontend/rayraw_node/src/userdevice.cc"
 
 # History of marks within files (newest to oldest):
+
+> ~/apps/rsyncdat/src/rsyncdat.sh
+	*	1765181495	0
+	"	33	0
+	^	33	0
+	.	35	0
+	+	34	92
+	+	34	91
+	+	146	3
+	+	145	38
+	+	34	0
+	+	34	54
+	+	50	103
+	+	51	92
+	+	34	31
+	+	34	52
+	+	51	92
+	+	50	103
+	+	33	41
+	+	34	0
+	+	35	0
 
 > ~/.gitconfig
 	*	1764740914	0
@@ -840,14 +861,6 @@ $
 > ~/apps/hddaq/Frontend/rayraw_node/src/userdevice.
 	*	1764723754	0
 	"	1	0
-
-> ~/apps/rsyncdat/src/rsyncdat.sh
-	*	1764644117	0
-	"	30	91
-	^	30	92
-	.	30	91
-	+	30	92
-	+	30	91
 
 > ~/.ssh/config
 	*	1764642641	0

@@ -28,6 +28,8 @@ REMOTE_DIR="/group/nu/ninja/work/otani/FROST_beamdata/e71c/datfile"
 SSH_KEY="/root/.ssh/rsync_ed25519"
 SSH_OPTS="-o BatchMode=yes -o IdentitiesOnly=yes -o PreferredAuthentications=publickey \
           -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/root/.ssh/known_hosts \
+          -o ConnectTimeout=10 \
+          -o ServerAliveInterval=60 -o ServerAliveCountMax=5 \
           -J sshcc1.kek.jp -i ${SSH_KEY}"
 
 # 帯域制限（任意）。環境変数 BW_LIMIT でも上書き可（例: 30M / 200M）
@@ -45,8 +47,8 @@ DIRTY_BACKGROUND_BYTES="${DIRTY_BACKGROUND_BYTES:-536870912}"  # 512MB
 DIRTY_BYTES="${DIRTY_BYTES:-1610612736}"                       # 1.5GB
 
 # ====== rsync オプション ======
-RSYNC_APPEND_OPTS=(-a --partial --inplace --append --no-perms --chmod=ugo=rwX --no-compress)
-RSYNC_FULL_OPTS=(-a --partial --inplace --no-perms --chmod=ugo=rwX --no-compress)
+RSYNC_APPEND_OPTS=(-a --partial --inplace --append --no-perms --chmod=ugo=rwX --no-compress --timeout=120)
+RSYNC_FULL_OPTS=(-a --partial --inplace --no-perms --chmod=ugo=rwX --no-compress --timeout=120)
 
 # ====== 引数チェック・パス決定 ======
 if [ -z "${1:-}" ]; then
@@ -140,7 +142,8 @@ while true; do
   if [ "$mode" = "append" ]; then
     ionice -c3 -t nice -n 10 \
       "${NOCACHE_LOCAL[@]}" \
-      rsync "${RSYNC_APPEND_OPTS[@]}" "${RSYNC_BWLIMIT[@]}" \
+      rsync "${RSYNC_APPEND_OPTS[@]}" \
+	    "${RSYNC_BWLIMIT[@]}" \
             -e "ssh $SSH_OPTS" \
             --rsync-path="$NOCACHE_REMOTE" \
             -- "$SRC_PATH" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/"
